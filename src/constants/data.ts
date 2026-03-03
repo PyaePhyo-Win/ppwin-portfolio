@@ -1,0 +1,72 @@
+import type { Project, NavLink, Skills } from '../types';
+
+export const NAV_LINKS: NavLink[] = [
+  { name: 'About', href: '#about' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Skills', href: '#skills' },
+  { name: 'Contact', href: '#contact' },
+];
+
+export const PROJECTS: Project[] = [
+  {
+    title: 'Tun Rice Milling Management System',
+    description: 'Developed a web-based system to manage appointments, paddy drying, milling output calculation based on moisture content, and inventory control. Improves operational efficiency and production monitoring.',
+    techStack: ['PHP', 'Laravel', 'Blade', 'JavaScript', 'Bootstrap', 'MySQL', 'Business Logic'],
+    githubLink: 'https://github.com/PyaePhyo-Win/TRM',
+  },
+  {
+    title: 'ThinkSpace – Backend API System',
+    description: 'Implemented backend APIs for comments, view tracking, statistical reports, and user moderation (block/hide). Designed scalable database relationships and structured REST endpoints.',
+    techStack: ['REST API', 'Laravel', 'MySQL', 'Spatie'],
+    githubLink: 'https://github.com/ewsd-g8/thinkspace-backend',
+  },
+  {
+    title: 'Retail Management - Backend System',
+    description: 'Built a C# backend API for a retail management system. Integrated using LINQ and Entity Framework Core with SQL Server. Includes stock control, cashier module, and reporting features.',
+    techStack: ['C#', 'EF Core', 'LINQ', 'SQL Server'],
+    githubLink: 'https://github.com/PyaePhyo-Win/retail-management-backend',
+  },
+  {
+    title: 'Retail Management - Frontend System',
+    description: 'Built a Vue frontend application for a retail management system. Used Axios for API requests. Used Pinia for state management. Integrated using LINQ and Entity Framework Core with SQL Server. Includes stock control, cashier module, and reporting features.',
+    techStack: ['Vue', 'TypeScript', 'HTML', 'CSS', 'Tailwind', 'Pinia', 'Tanstack Query'],
+    githubLink: 'https://github.com/PyaePhyo-Win/retail-management-frontend',
+  },
+  {
+    title: 'Retail Management - Frontend System',
+    description: 'Built a React frontend application for a retail management system. Used Axios for API requests. Used Redux for state management. Includes stock control, cashier module, and reporting features.',
+    techStack: ['React', 'TypeScript', 'HTML', 'CSS', 'Tailwind', 'Redux', 'Tanstack Query'],
+    githubLink: 'https://github.com/PyaePhyo-Win/retail-management-react',
+  },
+  {
+    title: 'Medicare E-Commerce Store',
+    description: 'Developed a secure online store with product listing, cart system, authentication, checkout, and order tracking.',
+    techStack: ['PHP', 'JavaScript', 'MySQL', 'Bootstrap'],
+    githubLink: 'https://github.com/PyaePhyo-Win/Medicare-ecommerce-store',
+  },
+  {
+    title: 'M-Hike – Offline Mobile App (Android)',
+    description: 'Created an offline-capable mobile application using SQLite. Features include hike planning, voice notes, photo capture, and local data management.',
+    techStack: ['Mobile Development', 'SQLite', 'Kotlin'],
+    githubLink: 'https://github.com/PyaePhyo-Win/M-Hike-Native-Android',
+  },
+  {
+    title: 'M-Hike – Offline Mobile App (Hybrid)',
+    description: 'Created an offline-capable mobile application using SQLite. Features include hike planning, voice notes, photo capture, and local data management.',
+    techStack: ['Mobile Development', 'SQLite', 'React Native'],
+    githubLink: 'https://github.com/PyaePhyo-Win/M-Hike-Hybrid',
+  },
+  {
+    title: 'Social Media Campaign',
+    description: 'Conceptualized and managed a digital campaign for product launch using Facebook, Instagram, and LinkedIn to increase engagement and visibility.',
+    techStack: ['PHP', 'JavaScript', 'MySQL', 'Bootstrap'],
+    githubLink: 'https://github.com/PyaePhyo-Win/social-media-campaign',
+  },
+];
+
+export const SKILLS: Skills = {
+  Frontend: ['HTML', 'CSS', 'JavaScript', 'Vue', 'React', 'Bootstrap', 'Tailwind', 'TypeScript', 'Kotlin', 'React Native'],
+  Backend: ['C#', 'PHP', 'Laravel'],
+  Database: ['SQL Server', 'MySQL'],
+  Tools: ['Git', 'EF Core'],
+};
