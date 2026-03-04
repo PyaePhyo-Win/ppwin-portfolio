@@ -8,9 +8,21 @@
       <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         I possess a strong foundation in database design, optimizing data structures for performance and scalability, and excel in developing secure and high-performing APIs that drive modern applications.
       </p>
-      <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+      <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
         My approach to development is rooted in analytical problem-solving, consistently striving to deliver elegant and maintainable code that meets both technical requirements and business objectives.
       </p>
+      <div class="flex justify-center">
+        <a 
+          href="/ppw_cv.pdf" 
+          download 
+          class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-300 transform hover:-translate-y-1"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+          </svg>
+          Download CV
+        </a>
+      </div>
     </div>
   </section>
 </template>
