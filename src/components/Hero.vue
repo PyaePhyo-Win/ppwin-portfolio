@@ -1,5 +1,5 @@
 <template>
-  <section class="min-h-screen flex items-center justify-center bg-white dark:bg-gray-900 transition-colors duration-300">
+  <section class="min-h-screen flex items-center justify-center bg-transparent transition-colors duration-300">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <h1 class="text-5xl font-extrabold text-gray-900 dark:text-white mb-4 leading-tight">
         Pyae Phyo Win

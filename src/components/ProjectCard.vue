@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 flex flex-col h-full">
+  <div class="bg-white/70 dark:bg-gray-800/70 backdrop-blur-md rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 flex flex-col h-full border border-white/20 dark:border-gray-700/30">
     <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">{{ title }}</h3>
     <p class="text-gray-700 dark:text-gray-300 text-base mb-4 flex-grow">{{ description }}</p>
 

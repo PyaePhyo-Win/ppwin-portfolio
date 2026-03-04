@@ -1,7 +1,7 @@
 <template>
   <section class="container max-w-6xl mx-auto px-6 py-16 min-h-screen flex flex-col items-center justify-center">
     <h2 class="text-4xl font-bold text-gray-900 dark:text-white text-center mb-12">My Skills</h2>
-    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-8 md:p-12 transition-colors duration-300">
+    <div class="bg-white/70 dark:bg-gray-800/70 backdrop-blur-md rounded-xl shadow-md p-8 md:p-12 transition-colors duration-300 border border-white/20 dark:border-gray-700/30">
       <div v-for="(skillsGroup, category) in SKILLS" :key="category" class="mb-8 last:mb-0">
         <h3 class="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">{{ category }}</h3>
         <div class="flex flex-wrap gap-3">

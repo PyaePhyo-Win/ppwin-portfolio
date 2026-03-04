@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50 transition-colors duration-300">
+  <nav class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-colors duration-300 border-b border-gray-200/50 dark:border-gray-800/50">
     <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
       <!-- Logo -->
       <router-link to="/" class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
@@ -52,7 +52,7 @@
 
     <!-- Mobile Navigation Menu -->
     <div v-if="isMobileMenuOpen"
-      class="md:hidden bg-white dark:bg-gray-800 pb-4 transition-all duration-300 ease-in-out">
+      class="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-md pb-4 transition-all duration-300 ease-in-out">
       <a v-for="link in NAV_LINKS" :key="link.name" :href="link.href"
         class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-gray-700 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300"
         @click="isMobileMenuOpen = false">

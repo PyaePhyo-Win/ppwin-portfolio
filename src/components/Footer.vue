@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-white dark:bg-gray-800 shadow-inner py-8 mt-16 transition-colors duration-300">
+  <footer class="bg-transparent py-8 mt-16 transition-colors duration-300">
     <div class="max-w-6xl mx-auto px-4 text-center text-gray-600 dark:text-gray-300">
       <div class="flex justify-center space-x-6 mb-4">
         <a href="https://github.com/PyaePhyo-Win" target="_blank" rel="noopener noreferrer"

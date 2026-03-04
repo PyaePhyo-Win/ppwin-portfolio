@@ -1,7 +1,8 @@
 <template>
-  <div class="bg-gray-50 dark:bg-gray-900 min-h-screen">
+  <div class="min-h-screen">
+    <BackgroundAnimation />
     <Navbar />
-    <main>
+    <main class="relative z-10">
       <router-view />
     </main>
     <Footer />
@@ -11,4 +12,5 @@
 <script setup lang="ts">
 import Navbar from './components/Navbar.vue';
 import Footer from './components/Footer.vue';
+import BackgroundAnimation from './components/BackgroundAnimation.vue';
 </script>

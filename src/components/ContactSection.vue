@@ -1,7 +1,7 @@
 <template>
   <section class="container w-full mx-auto px-6 py-16 min-h-screen flex flex-col items-center justify-center">
     <h2 class="text-4xl font-bold text-gray-900 dark:text-white text-center mb-12">Get in Touch</h2>
-    <div class="bg-white w-full dark:bg-gray-800 rounded-xl shadow-md p-8 md:p-12 transition-colors duration-300">
+    <div class="bg-white/70 w-full dark:bg-gray-800/70 backdrop-blur-md rounded-xl shadow-md p-8 md:p-12 transition-colors duration-300 border border-white/20 dark:border-gray-700/30">
       <form @submit.prevent="submitForm" class="space-y-6">
         <div>
           <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
