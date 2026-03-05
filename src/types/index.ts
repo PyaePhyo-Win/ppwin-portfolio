@@ -11,6 +11,18 @@ export interface NavLink {
   href: string;
 }
 
+export interface WorkExperience {
+  role: string;
+  company: string;
+  description: string[];
+}
+
+export interface Education {
+  degree: string;
+  institution: string;
+  period: string;
+}
+
 export type SkillCategory = 'Frontend' | 'Backend' | 'Database' | 'Tools' | string;
 
 export interface Skills {

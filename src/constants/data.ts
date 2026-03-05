@@ -1,10 +1,51 @@
-import type { Project, NavLink, Skills } from '../types';
+import type { Project, NavLink, Skills, WorkExperience, Education } from '../types';
 
 export const NAV_LINKS: NavLink[] = [
   { name: 'About', href: '#about' },
   { name: 'Projects', href: '#projects' },
   { name: 'Skills', href: '#skills' },
   { name: 'Contact', href: '#contact' },
+];
+
+export const WORK_EXPERIENCE: WorkExperience[] = [
+  {
+    role: 'AI MODEL DEVELOPER & TRAINER',
+    company: 'MY DAY THU KYWAL',
+    description: [
+      'Designed and implemented custom machine learning models using TensorFlow, PyTorch, and scikit-learn.',
+      'Trained deep neural networks for tasks such as classification and object detection.',
+      'Applied transfer learning and fine-tuning on pre-trained models (BERT, GPT, YOLO, ResNet).',
+      'Collected, cleaned, and annotated large datasets from various sources.',
+    ],
+  },
+  {
+    role: 'JUNIOR PROGRAMMER',
+    company: 'THETYS Co., Ltd.',
+    description: [
+      'Backend: C# (.NET), Hangfire, MSSQL — REST API, background jobs, database operations, OpenAI integrations.',
+      'Frontend: Vue.js, React, TypeScript, shadcn/ui, VueFlow, Pinia — responsive UIs, state management.',
+      'Data & APIs: Axios, TanStack Query — API integration, data fetching, and synchronization.',
+      'Testing: Postman, k6, Playwright — API validation, performance, and end-to-end testing.',
+    ],
+  },
+];
+
+export const EDUCATION: Education[] = [
+  {
+    degree: 'Level 4 Diploma in Computing',
+    institution: 'KMD Institute',
+    period: 'Awarded in October 2023',
+  },
+  {
+    degree: 'Level 5 Diploma in Computing',
+    institution: 'KMD Institute',
+    period: 'Awarded in October 2024',
+  },
+  {
+    degree: 'Final Year (B.Sc Hons Computing)',
+    institution: 'University of Greenwich (UK)',
+    period: 'Completed (Expecting to be awarded Degree)',
+  },
 ];
 
 export const PROJECTS: Project[] = [
