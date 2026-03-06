@@ -1,3 +1,9 @@
+export interface Stat {
+  label: string;
+  value: string;
+  iconKey: 'experience' | 'projects';
+}
+
 export interface Project {
   title: string;
   description: string;

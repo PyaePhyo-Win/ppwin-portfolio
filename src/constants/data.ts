@@ -1,4 +1,9 @@
-import type { Project, NavLink, Skills, WorkExperience, Education } from '../types';
+import type { Project, NavLink, Skills, WorkExperience, Education, Stat } from '../types';
+
+export const STATS: Stat[] = [
+  { label: 'Years of Experience', value: '1.5', iconKey: 'experience' },
+  { label: 'Projects Completed', value: '12', iconKey: 'projects' },
+];
 
 export const NAV_LINKS: NavLink[] = [
   { name: 'About', href: '#about' },
