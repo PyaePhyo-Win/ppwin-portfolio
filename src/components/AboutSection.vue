@@ -78,7 +78,7 @@
     <!-- Download CV Button -->
     <div class="mt-12 flex justify-center">
       <a 
-        href="/ppw_cv.pdf" 
+        href="/public/ppw_cv1.pdf" 
         download 
         class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-semibold rounded-xl shadow-lg text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-indigo-500/25"
       >
