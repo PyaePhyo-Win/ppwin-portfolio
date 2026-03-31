@@ -18,7 +18,7 @@
     </div>
 
     <!-- Pagination Controls -->
-    <div v-if="totalPages > 1" class="mt-6 md:mt-0 flex items-center justify-center space-x-4">
+    <div v-if="totalPages > 1" class="mt-6 sm:mt-6 md:mt-6 flex items-center justify-center space-x-4">
       <button 
         @click="prevPage" 
         :disabled="currentPage === 1"
