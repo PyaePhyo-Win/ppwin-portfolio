@@ -1,9 +1,9 @@
 <template>
-  <section id="projects" class="container max-w-6xl mx-auto px-6 py-16 min-h-screen flex flex-col items-center justify-center overflow-hidden">
+  <section id="projects" class="container max-w-6xl mx-auto px-6 py-16 flex flex-col items-center overflow-hidden">
     <h2 class="text-4xl font-bold text-gray-900 dark:text-white text-center mb-12 mt-6">My Projects</h2>
     
     <!-- Projects Grid with Transition -->
-    <div class="relative w-full min-h-[500px]">
+    <div class="relative w-full">
       <TransitionGroup 
         name="project-fade" 
         tag="div" 
@@ -18,7 +18,7 @@
     </div>
 
     <!-- Pagination Controls -->
-    <div v-if="totalPages > 1" class="mt-6 sm:mt-6 md:mt-6 flex items-center justify-center space-x-4">
+    <div v-if="totalPages > 1" class="mt-10 flex items-center justify-center space-x-4">
       <button 
         @click="prevPage" 
         :disabled="currentPage === 1"

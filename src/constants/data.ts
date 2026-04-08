@@ -108,6 +108,12 @@ export const PROJECTS: Project[] = [
     techStack: ['PHP', 'JavaScript', 'MySQL', 'Bootstrap'],
     githubLink: 'https://github.com/PyaePhyo-Win/social-media-campaign',
   },
+  {
+    title: 'Advanced LLM Integration (Learning Project)',
+    description: 'A hands-on project focused on mastering API integration using the Google GenAI SDK and Python. Developed automated pipelines for structured data extraction and prompt evaluation, implementing custom resilience layers with Tenacity to handle API rate-limiting and error recovery.',
+    techStack: ['Python', 'Jupyter Notebook', 'Google GenAI SDK', 'Pydantic', 'Tenacity'],
+    githubLink: '',
+  }
 ];
 
 export const SKILLS: Skills = {
@@ -115,5 +121,5 @@ export const SKILLS: Skills = {
   Backend: ['C#', 'PHP', 'Laravel', 'Python'],
   Database: ['Microsoft SQL Server', 'MySQL'],
   Tools: ['Git', 'EF Core'],
-  AI: ['Prompt Engineering', 'Prompt Evaluation', 'Structured Output (JSON)', 'OPENAI API', 'GEMINI API']
+  AI: ['Prompt Engineering', 'Prompt Evaluation', 'Structured Output (JSON/Response Schemas)', 'OPENAI API', 'GEMINI API', 'Streaming Responses', 'Multimodal LLMs (Vision)']
 };
