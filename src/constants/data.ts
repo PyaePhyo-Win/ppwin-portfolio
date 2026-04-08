@@ -28,7 +28,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     company: 'THETYS Co., Ltd.',
     description: [
       'Backend: C# (.NET), Hangfire, MSSQL — REST API, background jobs, database operations, OpenAI integrations.',
-      'Frontend: Vue.js, React, TypeScript, shadcn/ui, VueFlow, Pinia — responsive UIs, state management.',
+      'Frontend: Vue.js, TypeScript, shadcn/ui, VueFlow, Pinia — responsive UIs, state management.',
       'Data & APIs: Axios, TanStack Query — API integration, data fetching, and synchronization.',
       'Testing: Postman, k6, Playwright — API validation, performance, and end-to-end testing.',
     ],
@@ -112,7 +112,8 @@ export const PROJECTS: Project[] = [
 
 export const SKILLS: Skills = {
   Frontend: ['HTML', 'CSS', 'JavaScript', 'Vue', 'React', 'Bootstrap', 'Tailwind', 'TypeScript', 'Kotlin', 'React Native'],
-  Backend: ['C#', 'PHP', 'Laravel'],
-  Database: ['SQL Server', 'MySQL'],
+  Backend: ['C#', 'PHP', 'Laravel', 'Python'],
+  Database: ['Microsoft SQL Server', 'MySQL'],
   Tools: ['Git', 'EF Core'],
+  AI: ['Prompt Engineering', 'Prompt Evaluation', 'Structured Output (JSON)', 'OPENAI API', 'GEMINI API']
 };
