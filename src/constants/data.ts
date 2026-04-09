@@ -112,7 +112,7 @@ export const PROJECTS: Project[] = [
     title: 'Advanced LLM Integration (Learning Project)',
     description: 'A hands-on project focused on mastering API integration using the Google GenAI SDK and Python. Developed automated pipelines for structured data extraction and prompt evaluation, implementing custom resilience layers with Tenacity to handle API rate-limiting and error recovery.',
     techStack: ['Python', 'Jupyter Notebook', 'Google GenAI SDK', 'Pydantic', 'Tenacity'],
-    githubLink: '',
+    githubLink: 'https://github.com/PyaePhyo-Win/gemini-api-integration',
   }
 ];
 
