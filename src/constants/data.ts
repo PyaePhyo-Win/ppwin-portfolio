@@ -59,6 +59,7 @@ export const PROJECTS: Project[] = [
     description: 'Developed a web-based system to manage appointments, paddy drying, milling output calculation based on moisture content, and inventory control. Improves operational efficiency and production monitoring.',
     techStack: ['PHP', 'Laravel', 'Blade', 'JavaScript', 'Bootstrap', 'MySQL', 'Business Logic'],
     githubLink: 'https://github.com/PyaePhyo-Win/TRM',
+    demoLink: 'https://trm-bmd0.onrender.com',
   },
   {
     title: 'ThinkSpace – Backend API System',
@@ -109,10 +110,16 @@ export const PROJECTS: Project[] = [
     githubLink: 'https://github.com/PyaePhyo-Win/social-media-campaign',
   },
   {
-    title: 'Advanced LLM Integration (Learning Project)',
+    title: 'Advanced LLM Integration',
     description: 'A hands-on project focused on mastering API integration using the Google GenAI SDK and Python. Developed automated pipelines for structured data extraction and prompt evaluation, implementing custom resilience layers with Tenacity to handle API rate-limiting and error recovery.',
     techStack: ['Python', 'Jupyter Notebook', 'Google GenAI SDK', 'Pydantic', 'Tenacity'],
     githubLink: 'https://github.com/PyaePhyo-Win/gemini-api-integration',
+  },
+  {
+    title:'NetFix CLI',
+    description: 'A high-performance TypeScript CLI tool that autonomously diagnoses and repairs network/DNS issues across macOS, Linux, and Windows. It features dynamic interface detection, a polished terminal UX, and a fully automated CI/CD pipeline for professional-grade reliability and distribution.',
+    techStack: ['TypeScript', 'Node.js', 'Commander.js', 'Execa', 'Chalk', 'Ora', 'Update-Notifier', 'Jest', 'ESLint', 'GitHub Actions'],
+    githubLink: 'https://github.com/PyaePhyo-Win/net-fix-cli',
   }
 ];
 
