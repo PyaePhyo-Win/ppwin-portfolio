@@ -20,6 +20,7 @@ export interface NavLink {
 export interface WorkExperience {
   role: string;
   company: string;
+  period?: string;
   description: string[];
 }
 

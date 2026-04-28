@@ -12,44 +12,60 @@ export const NAV_LINKS: NavLink[] = [
   { name: 'Contact', href: '#contact' },
 ];
 
+export const ABOUT_ME = {
+  title: 'Who I Am',
+  description: [
+    "I am a dedicated Full Stack Developer based in Yangon, currently pursuing my B.Sc (Hons) in Computing from the University of Greenwich. I specialize in building robust and efficient digital solutions, from complex backend systems to responsive frontend interfaces.",
+    "With professional experience as an AI Model Developer & Trainer, I have a strong foundation in deep neural networks and transfer learning. I excel in integrating advanced AI/ML solutions into modern applications.",
+    "My approach to development is rooted in analytical problem-solving and a commitment to security and intelligence. I am also expanding my horizons by learning the Japanese language to better connect with global teams."
+  ]
+};
+
 export const WORK_EXPERIENCE: WorkExperience[] = [
-  {
-    role: 'AI MODEL DEVELOPER & TRAINER',
-    company: 'MY DAY THU KYWAL',
-    description: [
-      'Designed and implemented custom machine learning models using TensorFlow, PyTorch, and scikit-learn.',
-      'Trained deep neural networks for tasks such as classification and object detection.',
-      'Applied transfer learning and fine-tuning on pre-trained models (BERT, GPT, YOLO, ResNet).',
-      'Collected, cleaned, and annotated large datasets from various sources.',
-    ],
-  },
   {
     role: 'JUNIOR PROGRAMMER',
     company: 'THETYS Co., Ltd.',
+    period: 'Aug 2025 – Present',
     description: [
-      'Backend: C# (.NET), Hangfire, MSSQL — REST API, background jobs, database operations, OpenAI integrations.',
-      'Frontend: Vue.js, TypeScript, shadcn/ui, VueFlow, Pinia — responsive UIs, state management.',
-      'Data & APIs: Axios, TanStack Query — API integration, data fetching, and synchronization.',
-      'Testing: Postman, k6, Playwright — API validation, performance, and end-to-end testing.',
+      'Developing REST APIs and background jobs using C# (.NET), Hangfire, and MSSQL.',
+      'Building flow-based interfaces and responsive UIs with Vue.js, TypeScript, and shadcn/ui.',
+      'Implementing OpenAI integrations and data synchronization using Axios and TanStack Query.',
+      'Conducting API validation and performance testing with Postman, k6, and Playwright.',
+    ],
+  },
+  {
+    role: 'AI MODEL DEVELOPER & TRAINER',
+    company: 'MY DAY THU KYWAL',
+    period: 'Jan 2025 – Jul 2025',
+    description: [
+      'Designed and implemented custom machine learning models using TensorFlow, PyTorch, and scikit-learn.',
+      'Trained deep neural networks (BERT, GPT, YOLO) for classification and object detection.',
+      'Applied transfer learning and fine-tuning techniques on large-scale datasets.',
+      'Collected, cleaned, and annotated datasets for model training and evaluation.',
     ],
   },
 ];
 
 export const EDUCATION: Education[] = [
   {
-    degree: 'Level 4 Diploma in Computing',
-    institution: 'KMD Institute',
-    period: 'Awarded in October 2023',
+    degree: 'B.Sc (Hons) Computing',
+    institution: 'University of Greenwich (UK)',
+    period: 'Current',
   },
   {
     degree: 'Level 5 Diploma in Computing',
     institution: 'KMD Institute',
-    period: 'Awarded in October 2024',
+    period: 'Awarded in Oct 2024',
   },
   {
-    degree: 'Final Year (B.Sc Hons Computing)',
-    institution: 'University of Greenwich (UK)',
-    period: 'Completed (Expecting to be awarded Degree)',
+    degree: 'Level 4 Diploma in Computing',
+    institution: 'KMD Institute',
+    period: 'Awarded in Oct 2023',
+  },
+  {
+    degree: 'Professional Web Developer',
+    institution: 'Fairway',
+    period: 'Completed',
   },
 ];
 
@@ -124,9 +140,17 @@ export const PROJECTS: Project[] = [
 ];
 
 export const SKILLS: Skills = {
-  Frontend: ['HTML', 'CSS', 'JavaScript', 'Vue', 'React', 'Bootstrap', 'Tailwind', 'TypeScript', 'Kotlin', 'React Native'],
-  Backend: ['C#', 'PHP', 'Laravel', 'Python'],
-  Database: ['Microsoft SQL Server', 'MySQL'],
-  Tools: ['Git', 'EF Core'],
-  AI: ['Prompt Engineering', 'Prompt Evaluation', 'Structured Output (JSON/Response Schemas)', 'OPENAI API', 'GEMINI API', 'Streaming Responses', 'Multimodal LLMs (Vision)']
+  Frontend: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'React', 'React Native', 'TypeScript', 'Tailwind CSS', 'Bootstrap', 'Kotlin'],
+  Backend: ['C# (.NET)', 'PHP (Laravel)', 'Python', 'Kotlin', 'Hangfire'],
+  Database: ['MSSQL', 'PostgreSQL', 'MySQL'],
+  Tools: ['Git', 'Docker', 'EF Core', 'GitHub Actions'],
+  AI: [
+    'Prompt Engineering', 
+    'Prompt Evaluation', 
+    'Structured Output (JSON Mode)', 
+    'Streaming Responses', 
+    'Multimodal LLMs (Vision)',
+    'BERT', 'GPT', 'YOLO',
+    'TensorFlow', 'PyTorch', 'scikit-learn'
+  ]
 };

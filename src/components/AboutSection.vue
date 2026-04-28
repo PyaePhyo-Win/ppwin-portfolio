@@ -12,17 +12,11 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
             </svg>
           </div>
-          <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Who I Am</h3>
+          <h3 class="text-2xl font-bold text-gray-900 dark:text-white">{{ ABOUT_ME.title }}</h3>
         </div>
         <div class="text-gray-700 dark:text-gray-300 space-y-4 leading-relaxed text-sm md:text-base flex-grow">
-          <p>
-            As a dedicated computer science student with a passion for full stack development, I specialize in crafting robust and efficient solutions. My expertise spans business logic implementation, ensuring seamless operation and data integrity within complex systems.
-          </p>
-          <p>
-            I possess a strong foundation in database design, optimizing data structures for performance and scalability, and excel in developing secure and high-performing APIs that drive modern applications.
-          </p>
-          <p>
-            My approach to development is rooted in analytical problem-solving, consistently striving to deliver elegant and maintainable code that meets both technical requirements and business objectives.
+          <p v-for="(paragraph, index) in ABOUT_ME.description" :key="index">
+            {{ paragraph }}
           </p>
         </div>
       </div>
@@ -41,7 +35,10 @@
           <div v-for="(work, index) in WORK_EXPERIENCE" :key="index" class="relative pl-6 border-l-2 border-indigo-500/30 pb-8 last:pb-2">
             <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-indigo-600 border-4 border-white dark:border-gray-800 z-10"></div>
             <h4 class="text-lg font-bold text-indigo-600 dark:text-indigo-400 leading-tight">{{ work.role }}</h4>
-            <p class="text-xs font-semibold text-gray-600 dark:text-gray-400 mb-3">{{ work.company }}</p>
+            <div class="flex flex-wrap justify-between items-baseline mb-3">
+              <p class="text-xs font-semibold text-gray-600 dark:text-gray-400">{{ work.company }}</p>
+              <p v-if="work.period" class="text-[10px] font-medium text-gray-500 dark:text-gray-500 uppercase tracking-wider">{{ work.period }}</p>
+            </div>
             <ul class="text-xs text-gray-700 dark:text-gray-300 space-y-2">
               <li v-for="(desc, dIndex) in work.description" :key="dIndex" class="flex items-start">
                 <span class="mr-2 text-indigo-500">•</span>
@@ -78,7 +75,7 @@
     <!-- Download CV Button -->
     <div class="mt-12 flex justify-center">
       <a 
-        href="/public/ppwin_cv.pdf" 
+        href="/ppwin_cv.pdf" 
         download 
         class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-semibold rounded-xl shadow-lg text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-indigo-500/25"
       >
@@ -92,5 +89,5 @@
 </template>
 
 <script setup lang="ts">
-import { WORK_EXPERIENCE, EDUCATION } from '../constants/data';
+import { WORK_EXPERIENCE, EDUCATION, ABOUT_ME } from '../constants/data';
 </script>
