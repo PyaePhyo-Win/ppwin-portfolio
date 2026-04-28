@@ -15,7 +15,7 @@ export const NAV_LINKS: NavLink[] = [
 export const ABOUT_ME = {
   title: 'Who I Am',
   description: [
-    "I am a dedicated Full Stack Developer based in Yangon, currently pursuing my B.Sc (Hons) in Computing from the University of Greenwich. I specialize in building robust and efficient digital solutions, from complex backend systems to responsive frontend interfaces.",
+    "I am a dedicated Full Stack Developer based in Yangon, completed my B.Sc (Hons) in Computing from the University of Greenwich. I specialize in building robust and efficient digital solutions, from complex backend systems to responsive frontend interfaces.",
     "With professional experience as an AI Model Developer & Trainer, I have a strong foundation in deep neural networks and transfer learning. I excel in integrating advanced AI/ML solutions into modern applications.",
     "My approach to development is rooted in analytical problem-solving and a commitment to security and intelligence. I am also expanding my horizons by learning the Japanese language to better connect with global teams."
   ]
@@ -50,7 +50,7 @@ export const EDUCATION: Education[] = [
   {
     degree: 'B.Sc (Hons) Computing',
     institution: 'University of Greenwich (UK)',
-    period: 'Current',
+    period: 'Graduated in 2026',
   },
   {
     degree: 'Level 5 Diploma in Computing',

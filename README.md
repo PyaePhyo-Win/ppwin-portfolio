@@ -1,6 +1,6 @@
 # Hi there, I'm Pyae Phyo Win 👋
 
-I am a **Full Stack Developer** based in Yangon, currently pursuing my B.Sc (Hons) in Computing from the **University of Greenwich**. I specialize in building robust backend systems, responsive frontend interfaces, and integrating advanced AI/ML solutions.
+I am a **Full Stack Developer** based in Yangon, completed my B.Sc (Hons) in Computing from the **University of Greenwich**. I specialize in building robust backend systems, responsive frontend interfaces, and integrating advanced AI/ML solutions.
 
 ## 🚀 About Me
 - 🔭 I’m currently working as a **Junior Programmer** at **THETYS Co., Ltd.**
