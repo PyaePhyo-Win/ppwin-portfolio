@@ -151,6 +151,6 @@ export const SKILLS: Skills = {
     'Streaming Responses', 
     'Multimodal LLMs (Vision)',
     'BERT', 'GPT', 'YOLO',
-    'TensorFlow', 'PyTorch', 'scikit-learn'
+    'TensorFlow', 'PyTorch', 'scikit-learn', 'Tool Use', 'RAG', 'Agentic Search'
   ]
 };
