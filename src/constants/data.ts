@@ -2,7 +2,7 @@ import type { Project, NavLink, Skills, WorkExperience, Education, Stat } from '
 
 export const STATS: Stat[] = [
   { label: 'Years of Experience', value: '1.5', iconKey: 'experience' },
-  { label: 'Projects Completed', value: '12', iconKey: 'projects' },
+  { label: 'Projects Completed', value: '13', iconKey: 'projects' },
 ];
 
 export const NAV_LINKS: NavLink[] = [
@@ -136,6 +136,12 @@ export const PROJECTS: Project[] = [
     description: 'A high-performance TypeScript CLI tool that autonomously diagnoses and repairs network/DNS issues across macOS, Linux, and Windows. It features dynamic interface detection, a polished terminal UX, and a fully automated CI/CD pipeline for professional-grade reliability and distribution.',
     techStack: ['TypeScript', 'Node.js', 'Commander.js', 'Execa', 'Chalk', 'Ora', 'Update-Notifier', 'Jest', 'ESLint', 'GitHub Actions'],
     githubLink: 'https://github.com/PyaePhyo-Win/net-fix-cli',
+  },
+  {
+    title: 'Fahh Player (MacOS App)',
+    description: 'FahhPlayer is a lightweight macOS menu bar utility that plays custom audio alerts when switching from AC to battery power or encountering zsh command errors.',
+    techStack: ['Swift', 'SwiftUI', 'AVFoundation', 'IOKit', 'Combine'],
+    githubLink: 'https://github.com/PyaePhyo-Win/fahhhhh-player',
   }
 ];
 
@@ -149,8 +155,6 @@ export const SKILLS: Skills = {
     'Prompt Evaluation', 
     'Structured Output (JSON Mode)', 
     'Streaming Responses', 
-    'Multimodal LLMs (Vision)',
-    'BERT', 'GPT', 'YOLO',
-    'TensorFlow', 'PyTorch', 'scikit-learn', 'Tool Use', 'RAG', 'Agentic Search'
+    'Multimodal LLMs (Vision)', 'GPT', 'Gemini', 'Tool Use', 'RAG', 'Agentic Search'
   ]
 };
