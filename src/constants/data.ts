@@ -16,7 +16,6 @@ export const ABOUT_ME = {
   title: 'Who I Am',
   description: [
     "I am a dedicated Full Stack Developer based in Yangon, completed my B.Sc (Hons) in Computing from the University of Greenwich. I specialize in building robust and efficient digital solutions, from complex backend systems to responsive frontend interfaces.",
-    "With professional experience as an AI Model Developer & Trainer, I have a strong foundation in deep neural networks and transfer learning. I excel in integrating advanced AI/ML solutions into modern applications.",
     "My approach to development is rooted in analytical problem-solving and a commitment to security and intelligence. I am also expanding my horizons by learning the Japanese language to better connect with global teams."
   ]
 };
@@ -24,7 +23,7 @@ export const ABOUT_ME = {
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
     role: 'JUNIOR PROGRAMMER',
-    company: 'THETYS Co., Ltd.',
+    company: 'Fusion Solution Co., Ltd.',
     period: 'Aug 2025 – Present',
     description: [
       'Developing REST APIs and background jobs using C# (.NET), Hangfire, and MSSQL.',
