@@ -2,7 +2,7 @@ import type { Project, NavLink, Skills, WorkExperience, Education, Stat } from '
 
 export const STATS: Stat[] = [
   { label: 'Years of Experience', value: '1.5', iconKey: 'experience' },
-  { label: 'Projects Completed', value: '13', iconKey: 'projects' },
+  { label: 'Projects Completed', value: '15', iconKey: 'projects' },
 ];
 
 export const NAV_LINKS: NavLink[] = [
@@ -141,6 +141,12 @@ export const PROJECTS: Project[] = [
     description: 'FahhPlayer is a lightweight macOS menu bar utility that plays custom audio alerts when switching from AC to battery power or encountering zsh command errors.',
     techStack: ['Swift', 'SwiftUI', 'AVFoundation', 'IOKit', 'Combine'],
     githubLink: 'https://github.com/PyaePhyo-Win/fahhhhh-player',
+  }
+  ,{
+    title: 'MCP Chat CLI',
+    description: 'MCP Chat is a command-line interface application built to learn and demonstrate how a Model Context Protocol (MCP) server and client interact. It enables chat capabilities with AI models through the Gemini API, supporting document retrieval, command-based prompts, and extensible tool integrations.',
+    techStack: ['Python', 'Gemini API', 'Google GenAI SDK', 'Rich', 'MCP'],
+    githubLink: 'https://github.com/PyaePhyo-Win/mcp-chat-cli',
   }
 ];
 

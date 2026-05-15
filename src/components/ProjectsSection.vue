@@ -76,8 +76,10 @@ const totalPages = computed(() => Math.ceil(PROJECTS.length / itemsPerPage));
 const startIndex = computed(() => (currentPage.value - 1) * itemsPerPage);
 const endIndex = computed(() => startIndex.value + itemsPerPage);
 
+const displayedProjects = computed(() => [...PROJECTS].reverse());
+
 const paginatedProjects = computed(() => {
-  return PROJECTS.slice(startIndex.value, endIndex.value);
+  return displayedProjects.value.slice(startIndex.value, endIndex.value);
 });
 
 const nextPage = () => {
