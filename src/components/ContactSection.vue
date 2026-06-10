@@ -1,43 +1,66 @@
 <template>
-  <section class="max-w-6xl w-full mx-auto px-4 py-16 min-h-screen flex flex-col items-center justify-center">
-    <h2 class="text-4xl font-bold text-gray-900 dark:text-white text-center mb-12">Get in Touch</h2>
-    <div class="bg-white/70 w-full dark:bg-gray-800/70 backdrop-blur-md rounded-xl shadow-md p-8 md:p-12 transition-colors duration-300 border border-white/20 dark:border-gray-700/30">
-      <form @submit.prevent="submitForm" class="space-y-6">
+  <section id="contact" class="section-shell">
+    <div class="section-frame">
+      <div class="section-card grid gap-7 p-5 md:p-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10">
+        <div class="flex flex-col justify-between gap-6">
+          <div class="section-heading text-left">
+            <p class="section-eyebrow">Contact</p>
+            <h2 class="section-title">Build Something Worth Shipping</h2>
+            <p class="section-copy mx-0">If you need someone who can think through the system, shape the interface, and deliver with discipline, send a message.</p>
+          </div>
+
+          <div class="grid gap-4">
+            <a href="https://github.com/PyaePhyo-Win" target="_blank" rel="noopener noreferrer" class="panel p-5 transition-transform duration-300 hover:-translate-y-1">
+              <p class="text-xs font-extrabold uppercase tracking-[0.24em] text-[var(--accent)]">GitHub</p>
+              <p class="mt-3 text-lg text-[var(--text)]">Code, experiments, and developer tooling.</p>
+            </a>
+            <a href="https://www.linkedin.com/in/pyae-phyo-win-748826297" target="_blank" rel="noopener noreferrer" class="panel p-5 transition-transform duration-300 hover:-translate-y-1">
+              <p class="text-xs font-extrabold uppercase tracking-[0.24em] text-[var(--accent)]">LinkedIn</p>
+              <p class="mt-3 text-lg text-[var(--text)]">Professional background, experience, and network.</p>
+            </a>
+            <a href="mailto:pyaephyowin706@gmail.com" class="panel p-5 transition-transform duration-300 hover:-translate-y-1">
+              <p class="text-xs font-extrabold uppercase tracking-[0.24em] text-[var(--accent)]">Email</p>
+              <p class="mt-3 text-lg text-[var(--text)]">Direct conversation for collaboration or opportunities.</p>
+            </a>
+          </div>
+        </div>
+
+        <form @submit.prevent="submitForm" class="panel space-y-6 p-5 md:p-6">
         <div>
-          <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
+          <label for="name" class="block text-sm font-extrabold uppercase tracking-[0.2em] text-[var(--text-soft)]">Name</label>
           <input
             type="text"
             id="name"
             v-model="form.name"
             @blur="validateField('name')"
-            :class="inputClass('name')"
-            class="mt-1 p-2 block w-full rounded-md shadow-sm sm:text-sm dark:bg-gray-700 dark:text-white dark:border-gray-600 transition-colors duration-300 min-h-[40px]"
+            :style="inputStyle('name')"
+            class="mt-2 block min-h-[52px] w-full rounded-[1.1rem] border bg-transparent px-4 py-3 text-base shadow-none outline-none transition-colors duration-300"
           />
           <p v-if="errors.name" class="mt-2 text-sm text-red-600">{{ errors.name }}</p>
         </div>
 
         <div>
-          <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
+          <label for="email" class="block text-sm font-extrabold uppercase tracking-[0.2em] text-[var(--text-soft)]">Email</label>
           <input
             type="email"
             id="email"
             v-model="form.email"
             @blur="validateField('email')"
-            :class="inputClass('email')"
-            class="mt-1 p-2 block w-full rounded-md shadow-sm sm:text-sm dark:bg-gray-700 dark:text-white dark:border-gray-600 transition-colors duration-300 min-h-[40px]"
+            :style="inputStyle('email')"
+            class="mt-2 block min-h-[52px] w-full rounded-[1.1rem] border bg-transparent px-4 py-3 text-base shadow-none outline-none transition-colors duration-300"
           />
           <p v-if="errors.email" class="mt-2 text-sm text-red-600">{{ errors.email }}</p>
         </div>
 
         <div>
-          <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Message</label>
+          <label for="message" class="block text-sm font-extrabold uppercase tracking-[0.2em] text-[var(--text-soft)]">Message</label>
           <textarea
             id="message"
             v-model="form.message"
             @blur="validateField('message')"
-            :class="inputClass('message')"
+            :style="inputStyle('message')"
             rows="5"
-            class="mt-1 p-2 block w-full rounded-md shadow-sm sm:text-sm dark:bg-gray-700 dark:text-white dark:border-gray-600 transition-colors duration-300"
+            class="mt-2 block w-full rounded-[1.1rem] border bg-transparent px-4 py-3 text-base shadow-none outline-none transition-colors duration-300"
           ></textarea>
           <p v-if="errors.message" class="mt-2 text-sm text-red-600">{{ errors.message }}</p>
         </div>
@@ -45,14 +68,15 @@
         <button
           type="submit"
           :disabled="!isFormValid"
-          class="inline-flex justify-center py-2 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-300"
+          class="btn-primary w-full justify-center sm:w-auto"
           :class="{ 'opacity-50 cursor-not-allowed': !isFormValid }"
         >
-          Send Message
+          Send Inquiry
         </button>
 
-        <p v-if="successMessage" class="mt-4 text-green-600 text-center">{{ successMessage }}</p>
+        <p v-if="successMessage" class="mt-4 text-sm font-semibold text-center" :style="{ color: successMessageColor }">{{ successMessage }}</p>
       </form>
+      </div>
     </div>
   </section>
 </template>
@@ -103,22 +127,20 @@ const validateField = (field: 'name' | 'email' | 'message') => {
   }
 };
 
-const inputClass = (field: 'name' | 'email' | 'message') => {
-  const baseClasses = 'border-gray-300 focus:ring-indigo-500 focus:border-indigo-500';
-  const invalidClasses = 'border-red-500 focus:ring-red-500 focus:border-red-500';
-  const validClasses = 'border-green-500 focus:ring-green-500 focus:border-green-500';
+const inputStyle = (field: 'name' | 'email' | 'message') => {
+  let borderColor = 'var(--surface-border)';
 
   if (errors[field]) {
-    return `${baseClasses} ${invalidClasses}`;
+    borderColor = '#dc2626';
+  } else if (form[field].trim() && (field !== 'email' || validateEmail(form.email))) {
+    borderColor = 'var(--accent)';
   }
-  // Only apply green border if field has been touched AND is valid
-  if (form[field].trim() && !errors[field]) {
-    if (field === 'email' && !validateEmail(form.email)) {
-      return baseClasses; // Don't make it green if email is not valid yet
-    }
-    return `${baseClasses} ${validClasses}`;
-  }
-  return baseClasses;
+
+  return {
+    borderColor,
+    color: 'var(--text)',
+    background: 'color-mix(in srgb, var(--surface-strong) 72%, transparent)'
+  };
 };
 
 
@@ -139,6 +161,8 @@ const resetForm = () => {
   });
   successMessage.value = '';
 };
+
+const successMessageColor = computed(() => successMessage.value.includes('successfully') ? 'var(--accent)' : '#dc2626');
 
 const submitForm = () => {
   // Validate all fields to show errors if any

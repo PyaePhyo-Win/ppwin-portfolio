@@ -1,22 +1,23 @@
 <template>
-  <div class="bg-white/70 dark:bg-gray-800/70 backdrop-blur-md rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 flex flex-col h-full border border-white/20 dark:border-gray-700/30">
-    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">{{ title }}</h3>
-    <p class="text-gray-700 dark:text-gray-300 text-base mb-4 flex-grow">{{ description }}</p>
+  <div class="section-card flex h-full flex-col p-6 transition-transform duration-300 hover:-translate-y-1 md:p-7">
+    <p class="text-xs font-extrabold uppercase tracking-[0.24em] text-[var(--accent)]">Project</p>
+    <h3 class="mt-4 text-3xl leading-tight text-[var(--text)]">{{ title }}</h3>
+    <p class="mt-4 flex-grow text-base leading-7 text-[var(--text-muted)]">{{ description }}</p>
 
-    <div class="mb-4 flex flex-wrap gap-2">
+    <div class="mt-6 mb-6 flex flex-wrap gap-2.5">
       <span v-for="tech in techStack" :key="tech"
-        class="bg-indigo-100 dark:bg-indigo-700 text-indigo-800 dark:text-indigo-100 text-xs font-medium px-2.5 py-0.5 rounded-full">
+        class="pill px-3 py-2 text-xs">
         {{ tech }}
       </span>
     </div>
 
     <div class="flex flex-col sm:flex-row gap-3 mt-auto">
       <a :href="githubLink" target="_blank" rel="noopener noreferrer"
-        class="flex-1 text-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-300">
+        class="btn-primary flex-1 text-center">
         GitHub
       </a>
       <a v-if="demoLink" :href="demoLink" target="_blank" rel="noopener noreferrer"
-        class="flex-1 text-center px-4 py-2 border border-gray-300 dark:border-gray-700 text-sm font-medium rounded-md shadow-sm text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-300">
+        class="btn-secondary flex-1 text-center">
         Demo
       </a>
     </div>

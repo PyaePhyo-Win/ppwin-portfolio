@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* Global styles and font imports */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 @theme {
   /* You can add custom theme variables here if needed */
@@ -9,15 +9,71 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+:root {
+  --bg: #f4efe6;
+  --bg-elevated: rgba(255, 251, 245, 0.72);
+  --bg-strong: rgba(255, 248, 239, 0.92);
+  --surface: rgba(255, 252, 247, 0.8);
+  --surface-strong: #fffaf2;
+  --surface-border: rgba(91, 100, 93, 0.14);
+  --text: #1f2933;
+  --text-muted: #55616b;
+  --text-soft: #6d7a84;
+  --accent: #0f766e;
+  --accent-strong: #115e59;
+  --accent-soft: rgba(15, 118, 110, 0.14);
+  --highlight: #b7791f;
+  --highlight-soft: rgba(183, 121, 31, 0.14);
+  --shadow: 0 24px 80px rgba(34, 32, 28, 0.08);
+  --shadow-soft: 0 14px 40px rgba(34, 32, 28, 0.06);
+}
+
+.dark {
+  --bg: #111716;
+  --bg-elevated: rgba(21, 28, 29, 0.78);
+  --bg-strong: rgba(16, 23, 23, 0.94);
+  --surface: rgba(24, 33, 34, 0.8);
+  --surface-strong: rgba(27, 38, 39, 0.95);
+  --surface-border: rgba(125, 153, 151, 0.2);
+  --text: #edf1ec;
+  --text-muted: #bcc7c0;
+  --text-soft: #8ea097;
+  --accent: #38b2ac;
+  --accent-strong: #67e8d8;
+  --accent-soft: rgba(56, 178, 172, 0.16);
+  --highlight: #f0b24b;
+  --highlight-soft: rgba(240, 178, 75, 0.14);
+  --shadow: 0 24px 90px rgba(0, 0, 0, 0.32);
+  --shadow-soft: 0 18px 42px rgba(0, 0, 0, 0.26);
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
+    background: var(--bg);
   }
 
   body {
-    font-family: 'Inter', sans-serif;
-    @apply bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100;
+    font-family: 'Manrope', sans-serif;
+    background: var(--bg);
+    color: var(--text);
     margin: 0;
+    transition: background-color 300ms ease, color 300ms ease;
+  }
+
+  a,
+  button,
+  input,
+  textarea {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'Instrument Serif', serif;
+    letter-spacing: -0.03em;
   }
 
   /* Custom Scrollbar Styles */
@@ -26,20 +82,206 @@
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-gray-100 dark:bg-gray-800;
+    background: transparent;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-indigo-500 rounded-full;
+    background: color-mix(in srgb, var(--accent) 72%, transparent);
+    border-radius: 9999px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-indigo-600;
+    background: var(--accent-strong);
   }
 
   /* For Firefox */
   * {
     scrollbar-width: thin;
-    scrollbar-color: #6366f1 transparent;
+    scrollbar-color: color-mix(in srgb, var(--accent) 72%, transparent) transparent;
+  }
+
+  ::selection {
+    background: var(--highlight-soft);
+  }
+}
+
+@layer components {
+  .app-shell {
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at top left, var(--highlight-soft), transparent 32%),
+      radial-gradient(circle at right 15%, var(--accent-soft), transparent 30%),
+      linear-gradient(180deg, var(--bg-strong), var(--bg));
+    color: var(--text);
+  }
+
+  .section-shell {
+    position: relative;
+    width: 100%;
+    padding: 4.25rem 1.25rem;
+    scroll-margin-top: 6rem;
+  }
+
+  .section-card {
+    width: 100%;
+    border: 1px solid var(--surface-border);
+    background: linear-gradient(180deg, var(--bg-elevated), var(--surface));
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(18px);
+    border-radius: 2rem;
+    transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease, background-color 260ms ease;
+  }
+
+  .section-frame {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+
+  .section-heading {
+    display: grid;
+    gap: 0.9rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+
+  .section-eyebrow {
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .section-title {
+    font-size: clamp(2.75rem, 5vw, 4.5rem);
+    line-height: 0.95;
+    color: var(--text);
+  }
+
+  .section-copy {
+    max-width: 42rem;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+  }
+
+  .panel {
+    border: 1px solid var(--surface-border);
+    background: color-mix(in srgb, var(--surface-strong) 88%, transparent);
+    box-shadow: var(--shadow-soft);
+    border-radius: 1.5rem;
+    transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
+  }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--surface-border);
+    background: color-mix(in srgb, var(--accent-soft) 46%, var(--surface-strong));
+    color: var(--text);
+    border-radius: 9999px;
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: transform 220ms ease, border-color 220ms ease, background-color 220ms ease;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    border-radius: 9999px;
+    padding: 0.95rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #f8faf8;
+    background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+    box-shadow: 0 18px 40px color-mix(in srgb, var(--accent) 28%, transparent);
+    transition: transform 250ms ease, box-shadow 250ms ease, opacity 250ms ease, filter 250ms ease;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 22px 44px color-mix(in srgb, var(--accent) 34%, transparent);
+    filter: saturate(1.04);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    border: 1px solid var(--surface-border);
+    border-radius: 9999px;
+    padding: 0.95rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--text);
+    background: color-mix(in srgb, var(--surface-strong) 84%, transparent);
+    transition: transform 250ms ease, border-color 250ms ease, background-color 250ms ease, box-shadow 250ms ease;
+  }
+
+  .btn-secondary:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--accent) 40%, var(--surface-border));
+    background: color-mix(in srgb, var(--accent-soft) 55%, var(--surface-strong));
+    box-shadow: var(--shadow-soft);
+  }
+
+  .btn-primary:focus-visible,
+  .btn-secondary:focus-visible,
+  .pill:focus-visible {
+    outline: 2px solid color-mix(in srgb, var(--accent) 72%, white);
+    outline-offset: 3px;
+  }
+
+  .btn-primary:active,
+  .btn-secondary:active {
+    transform: translateY(0);
+  }
+
+  .panel:hover {
+    border-color: color-mix(in srgb, var(--accent) 30%, var(--surface-border));
+  }
+
+  .section-card:hover {
+    border-color: color-mix(in srgb, var(--accent) 22%, var(--surface-border));
+  }
+}
+
+@media (min-width: 768px) {
+  .section-shell {
+    padding: 6rem 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-heading {
+    margin-bottom: 2rem;
+  }
+
+  .section-title {
+    font-size: clamp(2.35rem, 12vw, 3.25rem);
+    line-height: 0.98;
+  }
+
+  .section-copy {
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    min-height: 3.35rem;
+    padding-inline: 1.25rem;
+  }
+
+  .pill {
+    padding: 0.65rem 0.9rem;
+    font-size: 0.82rem;
   }
 }

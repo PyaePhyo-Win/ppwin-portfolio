@@ -1,12 +1,12 @@
 <template>
-  <div id="home">
+  <div id="home" class="pb-12 md:pb-20">
     <Hero />
-    <AboutSection id="about" class="py-16" />
-    <ExperienceSection class="py-16" />
-    <EducationSection class="py-16" />
-    <ProjectsSection id="projects" class="py-16" />
-    <SkillsSection id="skills" class="py-16" />
-    <ContactSection id="contact" class="py-16" />
+    <AboutSection id="about" />
+    <ExperienceSection />
+    <EducationSection />
+    <ProjectsSection id="projects" />
+    <SkillsSection id="skills" />
+    <ContactSection id="contact" />
   </div>
 </template>
 

@@ -1,7 +1,6 @@
 import type { Project, NavLink, Skills, WorkExperience, Education, Stat } from '../types';
 
 export const STATS: Stat[] = [
-  { label: 'Years of Experience', value: '1.5', iconKey: 'experience' },
   { label: 'Projects Completed', value: '15', iconKey: 'projects' },
 ];
 
@@ -24,17 +23,6 @@ export const ABOUT_ME = {
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
-    role: 'JUNIOR PROGRAMMER',
-    company: 'Fusion Solution Co., Ltd.',
-    period: 'Aug 2025 – Present',
-    description: [
-      'Developing REST APIs and background jobs using C# (.NET), Hangfire, and MSSQL.',
-      'Building flow-based interfaces and responsive UIs with Vue.js, TypeScript, and shadcn/ui.',
-      'Implementing OpenAI integrations and data synchronization using Axios and TanStack Query.',
-      'Conducting API validation and performance testing with Postman, k6, and Playwright.',
-    ],
-  },
-  {
     role: 'AI MODEL DEVELOPER & TRAINER',
     company: 'MY DAY THU KYWAL',
     period: 'Jan 2025 – Jul 2025',
@@ -43,6 +31,17 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
       'Trained deep neural networks (BERT, GPT, YOLO) for classification and object detection.',
       'Applied transfer learning and fine-tuning techniques on large-scale datasets.',
       'Collected, cleaned, and annotated datasets for model training and evaluation.',
+    ],
+  },
+  {
+    role: 'JUNIOR PROGRAMMER',
+    company: 'Fusion Solution Co., Ltd.',
+    period: 'Aug 2025 – Present',
+    description: [
+      'Developing REST APIs and background jobs using C# (.NET), Hangfire, and MSSQL.',
+      'Building flow-based interfaces and responsive UIs with Vue.js, TypeScript, and shadcn/ui.',
+      'Implementing OpenAI integrations and data synchronization using Axios and TanStack Query.',
+      'Conducting API validation and performance testing with Postman, k6, and Playwright.',
     ],
   },
 ];
