@@ -101,7 +101,13 @@
   }
 
   ::selection {
-    background: var(--highlight-soft);
+    background: var(--accent);
+    color: #f8faf8;
+  }
+
+  .dark ::selection {
+    background: var(--accent);
+    color: #111716;
   }
 }
 
