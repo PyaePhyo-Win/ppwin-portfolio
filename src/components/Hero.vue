@@ -2,25 +2,25 @@
   <section class="section-shell flex min-h-screen items-center md:pt-0">
     <div class="section-frame grid items-center gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-14">
       <div class="order-2 text-center lg:order-1 lg:text-left">
-        <div class="mb-5 flex flex-wrap justify-center gap-3 lg:justify-start">
+        <div v-reveal="{ delay: 60, distance: 18 }" class="mb-5 flex flex-wrap justify-center gap-3 lg:justify-start">
           <span class="pill">Yangon-based software engineer</span>
           <span class="pill">Product-minded full stack builder</span>
         </div>
 
-        <p class="mb-4 text-xs font-extrabold uppercase tracking-[0.35em] text-[var(--accent)]">Engineering with clarity
+        <p v-reveal="{ delay: 120, distance: 20 }" class="mb-4 text-xs font-extrabold uppercase tracking-[0.35em] text-[var(--accent)]">Engineering with clarity
           and range</p>
-        <h1 class="max-w-4xl text-[3.3rem] leading-[0.9] text-[var(--text)] sm:text-[4.75rem] lg:text-[6.35rem]">
+        <h1 v-reveal="{ delay: 180, distance: 24 }" class="max-w-4xl text-[3.3rem] leading-[0.9] text-[var(--text)] sm:text-[4.75rem] lg:text-[6.35rem]">
           Pyae Phyo Win
         </h1>
-        <p class="mt-4 text-lg font-extrabold uppercase tracking-[0.22em] text-[var(--text-soft)] sm:text-2xl">
+        <p v-reveal="{ delay: 240, distance: 22 }" class="mt-4 text-lg font-extrabold uppercase tracking-[0.22em] text-[var(--text-soft)] sm:text-2xl">
           Full Stack Developer building dependable digital systems
         </p>
-        <p class="mx-auto mt-7 max-w-2xl text-base leading-8 text-[var(--text-muted)] lg:mx-0 lg:text-lg">
+        <p v-reveal="{ delay: 300, distance: 24 }" class="mx-auto mt-7 max-w-2xl text-base leading-8 text-[var(--text-muted)] lg:mx-0 lg:text-lg">
           I turn backend logic, interface detail, and applied AI into products that feel clear, stable, and ready for
           real use, not just presentation.
         </p>
 
-        <div class="mt-9 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
+        <div v-reveal="{ delay: 360, distance: 24 }" class="mt-9 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
           <a href="#projects" class="btn-primary">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
               stroke="currentColor">
@@ -40,7 +40,12 @@
         </div>
 
         <div class="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-          <div v-for="stat in heroStats" :key="stat.label" class="panel px-5 py-5 text-left">
+          <div
+            v-for="(stat, index) in heroStats"
+            :key="stat.label"
+            v-reveal="{ delay: 420 + index * 90, distance: 22 }"
+            class="panel px-5 py-5 text-left"
+          >
             <p class="text-xs font-extrabold uppercase tracking-[0.26em] text-[var(--text-soft)]">{{ stat.label }}</p>
             <p class="mt-3 text-3xl font-extrabold text-[var(--text)]">{{ stat.value }}</p>
             <p class="mt-2 text-sm leading-6 text-[var(--text-muted)]">{{ stat.summary }}</p>
@@ -49,9 +54,9 @@
       </div>
 
       <div class="order-1 lg:order-2">
-        <div class="section-card overflow-hidden p-4 sm:p-6 lg:p-7">
+        <div v-reveal="{ delay: 220, distance: 26, origin: 'right' }" class="section-card overflow-hidden p-4 sm:p-6 lg:p-7">
           <div class="grid gap-5 lg:grid-cols-[0.95fr_1.05fr] lg:items-end mb-5">
-            <div class="relative">
+            <div v-reveal="{ delay: 320, distance: 24, origin: 'right' }" class="relative">
               <div class="absolute inset-0 rounded-[2rem] blur-3xl"
                 style="background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 18%, transparent), transparent 75%);">
               </div>
@@ -61,12 +66,12 @@
 
             <div class="flex flex-col gap-4">
               <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
-                <div class="panel p-5">
+                <div v-reveal="{ delay: 380, distance: 18, origin: 'right' }" class="panel p-5">
                   <p class="text-xs font-extrabold uppercase tracking-[0.26em] text-[var(--text-soft)]">Core Stack</p>
                   <p class="mt-3 text-base leading-7 text-[var(--text-muted)]">Vue, TypeScript, .NET, Laravel, SQL, and
                     pragmatic AI integration across product workflows.</p>
                 </div>
-                <div class="panel p-5">
+                <div v-reveal="{ delay: 450, distance: 18, origin: 'right' }" class="panel p-5">
                   <p class="text-xs font-extrabold uppercase tracking-[0.26em] text-[var(--text-soft)]">Working Style
                   </p>
                   <p class="mt-3 text-base leading-7 text-[var(--text-muted)]">Calm execution, strong structure, and
@@ -75,7 +80,7 @@
               </div>
             </div>
           </div>
-          <a href="https://github.com/PyaePhyo-Win" target="_blank" rel="noopener noreferrer"
+          <a v-reveal="{ delay: 520, distance: 20, origin: 'right' }" href="https://github.com/PyaePhyo-Win" target="_blank" rel="noopener noreferrer"
               class="btn-secondary flex w-full self-stretch">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                 <path

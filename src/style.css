@@ -122,6 +122,40 @@
     scroll-margin-top: 6rem;
   }
 
+  .reveal-element {
+    --reveal-delay: 0ms;
+    --reveal-duration: 720ms;
+    --reveal-distance: 28px;
+    opacity: 0;
+    will-change: opacity, transform;
+    pointer-events: none;
+    transition:
+      opacity var(--reveal-duration) cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay),
+      transform var(--reveal-duration) cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay);
+  }
+
+  .reveal-origin-bottom {
+    transform: translate3d(0, var(--reveal-distance), 0) scale(0.985);
+  }
+
+  .reveal-origin-left {
+    transform: translate3d(calc(var(--reveal-distance) * -1), 0, 0) scale(0.985);
+  }
+
+  .reveal-origin-right {
+    transform: translate3d(var(--reveal-distance), 0, 0) scale(0.985);
+  }
+
+  .reveal-origin-center {
+    transform: scale(0.97);
+  }
+
+  .reveal-element.is-revealed {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    pointer-events: auto;
+  }
+
   .section-card {
     width: 100%;
     border: 1px solid var(--surface-border);
@@ -249,6 +283,26 @@
 
   .section-card:hover {
     border-color: color-mix(in srgb, var(--accent) 22%, var(--surface-border));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal-element {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    transition: none;
+    will-change: auto;
+  }
+
+  .orb-one,
+  .orb-two,
+  .orb-three {
+    animation: none !important;
   }
 }
 

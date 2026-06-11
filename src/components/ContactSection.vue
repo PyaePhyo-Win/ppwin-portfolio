@@ -1,31 +1,31 @@
 <template>
   <section id="contact" class="section-shell">
     <div class="section-frame">
-      <div class="section-card grid gap-7 p-5 md:p-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10">
+      <div v-reveal="{ distance: 24 }" class="section-card grid gap-7 p-5 md:p-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10">
         <div class="flex flex-col justify-between gap-6">
-          <div class="section-heading text-left">
+          <div v-reveal="{ delay: 50, distance: 18 }" class="section-heading text-left">
             <p class="section-eyebrow">Contact</p>
             <h2 class="section-title">Build Something Worth Shipping</h2>
             <p class="section-copy mx-0">If you need someone who can think through the system, shape the interface, and deliver with discipline, send a message.</p>
           </div>
 
           <div class="grid gap-4">
-            <a href="https://github.com/PyaePhyo-Win" target="_blank" rel="noopener noreferrer" class="panel p-5 transition-transform duration-300 hover:-translate-y-1">
+            <a v-reveal="{ delay: 120, distance: 18 }" href="https://github.com/PyaePhyo-Win" target="_blank" rel="noopener noreferrer" class="panel p-5 transition-transform duration-300 hover:-translate-y-1">
               <p class="text-xs font-extrabold uppercase tracking-[0.24em] text-[var(--accent)]">GitHub</p>
               <p class="mt-3 text-lg text-[var(--text)]">Code, experiments, and developer tooling.</p>
             </a>
-            <a href="https://www.linkedin.com/in/pyae-phyo-win-748826297" target="_blank" rel="noopener noreferrer" class="panel p-5 transition-transform duration-300 hover:-translate-y-1">
+            <a v-reveal="{ delay: 180, distance: 18 }" href="https://www.linkedin.com/in/pyae-phyo-win-748826297" target="_blank" rel="noopener noreferrer" class="panel p-5 transition-transform duration-300 hover:-translate-y-1">
               <p class="text-xs font-extrabold uppercase tracking-[0.24em] text-[var(--accent)]">LinkedIn</p>
               <p class="mt-3 text-lg text-[var(--text)]">Professional background, experience, and network.</p>
             </a>
-            <a href="mailto:pyaephyowin706@gmail.com" class="panel p-5 transition-transform duration-300 hover:-translate-y-1">
+            <a v-reveal="{ delay: 240, distance: 18 }" href="mailto:pyaephyowin706@gmail.com" class="panel p-5 transition-transform duration-300 hover:-translate-y-1">
               <p class="text-xs font-extrabold uppercase tracking-[0.24em] text-[var(--accent)]">Email</p>
               <p class="mt-3 text-lg text-[var(--text)]">Direct conversation for collaboration or opportunities.</p>
             </a>
           </div>
         </div>
 
-        <form @submit.prevent="submitForm" class="panel space-y-6 p-5 md:p-6">
+        <form v-reveal="{ delay: 120, distance: 22, origin: 'right' }" @submit.prevent="submitForm" class="panel space-y-6 p-5 md:p-6">
         <div>
           <label for="name" class="block text-sm font-extrabold uppercase tracking-[0.2em] text-[var(--text-soft)]">Name</label>
           <input

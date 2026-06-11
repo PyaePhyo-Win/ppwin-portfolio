@@ -1,14 +1,14 @@
 <template>
   <section id="skills" class="section-shell">
     <div class="section-frame">
-      <div class="section-heading">
+      <div v-reveal="{ distance: 22 }" class="section-heading">
         <p class="section-eyebrow">Working Range</p>
         <h2 class="section-title">Skills</h2>
         <p class="section-copy">These are the tools I reach for when building software that needs to be usable, maintainable, and ready for production pressure.</p>
       </div>
 
       <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-        <div v-for="(skillsGroup, category) in SKILLS" :key="category" class="section-card p-6 md:p-7">
+        <div v-for="(skillsGroup, category, index) in SKILLS" :key="category" v-reveal="{ delay: index * 70, distance: 24 }" class="section-card p-6 md:p-7">
           <p class="text-xs font-extrabold uppercase tracking-[0.24em] text-[var(--accent)]">{{ category === 'AI' ? 'AI Integration' : category }}</p>
           <p class="mt-4 text-sm leading-7 text-[var(--text-muted)]">{{ categoryDescriptions[category] }}</p>
           <div class="mt-6 flex flex-wrap gap-3">

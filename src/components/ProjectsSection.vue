@@ -1,13 +1,13 @@
 <template>
   <section id="projects" class="section-shell overflow-hidden">
     <div class="section-frame">
-      <div class="section-heading">
+      <div v-reveal="{ distance: 22 }" class="section-heading">
         <p class="section-eyebrow">Selected Work</p>
         <h2 class="section-title">Projects</h2>
         <p class="section-copy">A focused selection of tools, systems, and product builds that show how I think through implementation, usability, and technical tradeoffs.</p>
       </div>
 
-      <div v-if="featuredProject" class="section-card mb-7 grid gap-7 p-5 md:p-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-10">
+      <div v-if="featuredProject" v-reveal="{ distance: 24 }" class="section-card mb-7 grid gap-7 p-5 md:p-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-10">
         <div>
           <p class="text-xs font-extrabold uppercase tracking-[0.26em] text-[var(--accent)]">Featured Project</p>
           <h3 class="mt-4 text-[2.75rem] leading-[0.95] text-[var(--text)] md:text-[3.5rem]">{{ featuredProject.title }}</h3>

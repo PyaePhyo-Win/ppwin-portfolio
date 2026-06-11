@@ -1,14 +1,14 @@
 <template>
   <section id="experience" class="section-shell">
     <div class="section-frame">
-      <div class="section-heading">
+      <div v-reveal="{ distance: 22 }" class="section-heading">
         <p class="section-eyebrow">Professional Practice</p>
         <h2 class="section-title">Experience</h2>
         <p class="section-copy">I do my best work where system reliability, interface quality, and delivery speed all matter at the same time.</p>
       </div>
 
       <div class="grid gap-5 lg:grid-cols-2">
-        <article v-for="(work, index) in WORK_EXPERIENCE" :key="index" class="section-card p-5 md:p-8">
+        <article v-for="(work, index) in WORK_EXPERIENCE" :key="index" v-reveal="{ delay: index * 90, distance: 24 }" class="section-card p-5 md:p-8">
           <div class="flex items-start justify-between gap-4">
             <div>
               <p class="text-xs font-extrabold uppercase tracking-[0.26em] text-[var(--accent)]">Chapter {{ index + 1 }}</p>
