@@ -36,7 +36,7 @@
 import { WORK_EXPERIENCE } from '../constants/data';
 
 const roleSummaries = [
-  'Production-focused engineering across backend APIs, internal tooling, frontend delivery, and AI-assisted product features.',
-  'Applied machine learning work centered on model development, training pipelines, and evaluation across real datasets.'
+  'Applied machine learning work centered on model development, training pipelines, and evaluation across real datasets.',
+  'Production-focused engineering across backend APIs, internal tooling, frontend delivery, and AI-assisted product features.'
 ];
 </script>

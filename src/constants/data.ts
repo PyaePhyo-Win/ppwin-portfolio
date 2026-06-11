@@ -38,10 +38,10 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     company: 'Fusion Solution Co., Ltd.',
     period: 'Aug 2025 – Present',
     description: [
+      'Designed and developed DOVA (Document OCR Vision Agent), implementing OpenAi integrations and custom OCR engines for high-accuracy raw text extraction.',
+      'Contributed to the development and optimization of Jarviz (HR Software), building robust backend processes and frontend features.',
+      'Engineered core cryptographic verification flow and REST API endpoints for Veracity (Digital Signature).',
       'Developing REST APIs and background jobs using C# (.NET), Hangfire, and MSSQL.',
-      'Building flow-based interfaces and responsive UIs with Vue.js, TypeScript, and shadcn/ui.',
-      'Implementing OpenAI integrations and data synchronization using Axios and TanStack Query.',
-      'Conducting API validation and performance testing with Postman, k6, and Playwright.',
     ],
   },
 ];
