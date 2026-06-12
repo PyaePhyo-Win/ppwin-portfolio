@@ -45,7 +45,9 @@
           <div>
             <p class="text-xs font-extrabold uppercase tracking-[0.26em] text-[var(--accent)]">0{{ index + 1 }}</p>
             <h3 class="mt-4 text-3xl leading-tight text-[var(--text)]">{{ edu.degree }}</h3>
-            <p class="mt-4 text-base leading-7 text-[var(--text-muted)]">{{ edu.institution }}</p>
+            <div class="mt-4">
+              <LogoLabel :label="edu.institution" :logo="edu.logo" />
+            </div>
           </div>
           <p class="mt-8 text-xs font-extrabold uppercase tracking-[0.24em] text-[var(--text-soft)]">{{ edu.period }}</p>
         </article>
@@ -62,7 +64,9 @@
           <div>
             <p class="text-xs font-extrabold uppercase tracking-[0.26em] text-[var(--accent)]">0{{ index + 1 }}</p>
             <h3 class="mt-4 text-3xl leading-tight text-[var(--text)]">{{ cert.degree }}</h3>
-            <p class="mt-4 text-base leading-7 text-[var(--text-muted)]">{{ cert.institution }}</p>
+            <div class="mt-4">
+              <LogoLabel :label="cert.institution" :logo="cert.logo" />
+            </div>
           </div>
           <p class="mt-8 text-xs font-extrabold uppercase tracking-[0.24em] text-[var(--text-soft)]">{{ cert.period }}</p>
         </article>
@@ -74,6 +78,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { ACADEMIC_EDUCATION, CERTIFICATIONS } from '../constants/data';
+import LogoLabel from './LogoLabel.vue';
 
 const activeTab = ref<'academic' | 'certificate'>('academic');
 

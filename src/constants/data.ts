@@ -32,6 +32,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
       'Applied transfer learning and fine-tuning techniques on large-scale datasets.',
       'Collected, cleaned, and annotated datasets for model training and evaluation.',
     ],
+    logo: '/companies/myday.png',
   },
   {
     role: 'JUNIOR PROGRAMMER',
@@ -43,6 +44,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
       'Engineered core cryptographic verification flow and REST API endpoints for Veracity (Digital Signature).',
       'Developing REST APIs and background jobs using C# (.NET), Hangfire, and MSSQL.',
     ],
+    logo: '/companies/fusion.png',
   },
 ];
 
@@ -51,24 +53,52 @@ export const ACADEMIC_EDUCATION: Education[] = [
     degree: 'B.Sc (Hons) Computing',
     institution: 'University of Greenwich (UK)',
     period: 'Awarded in 26 Feb 2026',
+    logo: '/institutions/greenwich.png',
   },
   {
     degree: 'Level 5 Diploma in Computing',
-    institution: 'KMD Institute',
+    institution: 'KMD College',
     period: 'Awarded in 25 Oct 2024',
+    logo: '/institutions/kmd.png',
   },
   {
     degree: 'Level 4 Diploma in Computing',
-    institution: 'KMD Institute',
+    institution: 'KMD College',
     period: 'Awarded in 27 Oct 2023',
+    logo: '/institutions/kmd.png',
   },
 ];
 
 export const CERTIFICATIONS: Education[] = [
   {
+    degree: 'Claude Code 101',
+    institution: 'Anthropic',
+    period: 'Completed in 9 June 2026',
+    logo: '/institutions/anthropic.png',
+  },
+  {
+    degree: 'Claude Code in Action',
+    institution: 'Anthropic',
+    period: 'Completed in 1 June 2026',
+    logo: '/institutions/anthropic.png',
+  },
+  {
+    degree: 'Introduction to Model Context Protocol',
+    institution: 'Anthropic',
+    period: 'Completed in 18 May 2026',
+    logo: '/institutions/anthropic.png',
+  },
+  {
+    degree: 'Building with the Claude API',
+    institution: 'Anthropic',
+    period: 'Completed in 18 May 2026',
+    logo: '/institutions/anthropic.png',
+  },
+  {
     degree: 'Professional Web Developer',
     institution: 'Fairway',
     period: 'Completed in 2024',
+    logo: '/institutions/fairway.png',
   },
 ];
 

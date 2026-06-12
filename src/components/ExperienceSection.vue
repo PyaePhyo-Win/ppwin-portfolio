@@ -17,7 +17,13 @@
             <span class="pill text-xs">{{ work.period }}</span>
           </div>
 
-          <p class="mt-4 text-sm font-extrabold uppercase tracking-[0.22em] text-[var(--text-soft)]">{{ work.company }}</p>
+          <div class="mt-4">
+            <LogoLabel
+              :label="work.company"
+              :logo="work.logo"
+              text-class="text-sm font-extrabold uppercase tracking-[0.22em] text-[var(--text-soft)]"
+            />
+          </div>
           <p class="mt-3 max-w-xl text-sm leading-7 text-[var(--text-muted)] md:text-base">{{ roleSummaries[index] }}</p>
 
           <ul class="mt-6 space-y-3">
@@ -34,6 +40,7 @@
 
 <script setup lang="ts">
 import { WORK_EXPERIENCE } from '../constants/data';
+import LogoLabel from './LogoLabel.vue';
 
 const roleSummaries = [
   'Applied machine learning work centered on model development, training pipelines, and evaluation across real datasets.',
