@@ -71,6 +71,12 @@ export const ACADEMIC_EDUCATION: Education[] = [
 
 export const CERTIFICATIONS: Education[] = [
   {
+    degree: 'Introduction to subagents',
+    institution: 'Anthropic',
+    period: 'Completed in 12 June 2026',
+    logo: '/institutions/anthropic.png',
+  },
+  {
     degree: 'Claude Code 101',
     institution: 'Anthropic',
     period: 'Completed in 9 June 2026',
@@ -188,7 +194,7 @@ export const SKILLS: Skills = {
   Frontend: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'React', 'React Native', 'TypeScript', 'Tailwind CSS', 'Bootstrap', 'Kotlin'],
   Backend: ['C# (.NET)', 'PHP (Laravel)', 'Python', 'Kotlin', 'Hangfire'],
   Database: ['MSSQL', 'PostgreSQL', 'MySQL'],
-  Tools: ['Git', 'Docker', 'EF Core', 'GitHub Actions'],
+  Tools: ['Git', 'Docker', 'EF Core', 'GitHub Actions', 'GitHub Copilot', 'Subagents', 'Agent Skills'],
   AI: [
     'Prompt Engineering', 
     'Prompt Evaluation', 
