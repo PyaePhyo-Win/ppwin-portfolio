@@ -46,26 +46,29 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
   },
 ];
 
-export const EDUCATION: Education[] = [
+export const ACADEMIC_EDUCATION: Education[] = [
   {
     degree: 'B.Sc (Hons) Computing',
     institution: 'University of Greenwich (UK)',
-    period: 'Graduated in 2026',
+    period: 'Awarded in 26 Feb 2026',
   },
   {
     degree: 'Level 5 Diploma in Computing',
     institution: 'KMD Institute',
-    period: 'Awarded in Oct 2024',
+    period: 'Awarded in 25 Oct 2024',
   },
   {
     degree: 'Level 4 Diploma in Computing',
     institution: 'KMD Institute',
-    period: 'Awarded in Oct 2023',
+    period: 'Awarded in 27 Oct 2023',
   },
+];
+
+export const CERTIFICATIONS: Education[] = [
   {
     degree: 'Professional Web Developer',
     institution: 'Fairway',
-    period: 'Completed',
+    period: 'Completed in 2024',
   },
 ];
 
