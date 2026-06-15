@@ -1,7 +1,6 @@
 import type { Project, NavLink, Skills, WorkExperience, Education, Stat } from '../types';
 
 export const STATS: Stat[] = [
-  { label: 'Years of Experience', value: '1.5', iconKey: 'experience' },
   { label: 'Projects Completed', value: '15', iconKey: 'projects' },
 ];
 
@@ -24,17 +23,6 @@ export const ABOUT_ME = {
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
-    role: 'JUNIOR PROGRAMMER',
-    company: 'Fusion Solution Co., Ltd.',
-    period: 'Aug 2025 – Present',
-    description: [
-      'Developing REST APIs and background jobs using C# (.NET), Hangfire, and MSSQL.',
-      'Building flow-based interfaces and responsive UIs with Vue.js, TypeScript, and shadcn/ui.',
-      'Implementing OpenAI integrations and data synchronization using Axios and TanStack Query.',
-      'Conducting API validation and performance testing with Postman, k6, and Playwright.',
-    ],
-  },
-  {
     role: 'AI MODEL DEVELOPER & TRAINER',
     company: 'MY DAY THU KYWAL',
     period: 'Jan 2025 – Jul 2025',
@@ -44,29 +32,79 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
       'Applied transfer learning and fine-tuning techniques on large-scale datasets.',
       'Collected, cleaned, and annotated datasets for model training and evaluation.',
     ],
+    logo: '/companies/myday.png',
+  },
+  {
+    role: 'JUNIOR PROGRAMMER',
+    company: 'Fusion Solution Co., Ltd.',
+    period: 'Aug 2025 – Present',
+    description: [
+      'Designed and developed DOVA (Document OCR Vision Agent), implementing OpenAi integrations and custom OCR engines for high-accuracy raw text extraction.',
+      'Contributed to the development and optimization of Jarviz (HR Software), building robust backend processes and frontend features.',
+      'Engineered core cryptographic verification flow and REST API endpoints for Veracity (Digital Signature).',
+      'Developing REST APIs and background jobs using C# (.NET), Hangfire, and MSSQL.',
+    ],
+    logo: '/companies/fusion.png',
   },
 ];
 
-export const EDUCATION: Education[] = [
+export const ACADEMIC_EDUCATION: Education[] = [
   {
     degree: 'B.Sc (Hons) Computing',
     institution: 'University of Greenwich (UK)',
-    period: 'Graduated in 2026',
+    period: 'Awarded in 26 Feb 2026',
+    logo: '/institutions/greenwich.png',
   },
   {
     degree: 'Level 5 Diploma in Computing',
-    institution: 'KMD Institute',
-    period: 'Awarded in Oct 2024',
+    institution: 'KMD College',
+    period: 'Awarded in 25 Oct 2024',
+    logo: '/institutions/kmd.png',
   },
   {
     degree: 'Level 4 Diploma in Computing',
-    institution: 'KMD Institute',
-    period: 'Awarded in Oct 2023',
+    institution: 'KMD College',
+    period: 'Awarded in 27 Oct 2023',
+    logo: '/institutions/kmd.png',
+  },
+];
+
+export const CERTIFICATIONS: Education[] = [
+  {
+    degree: 'Introduction to subagents',
+    institution: 'Anthropic',
+    period: 'Completed in 12 June 2026',
+    logo: '/institutions/anthropic.png',
+  },
+  {
+    degree: 'Claude Code 101',
+    institution: 'Anthropic',
+    period: 'Completed in 9 June 2026',
+    logo: '/institutions/anthropic.png',
+  },
+  {
+    degree: 'Claude Code in Action',
+    institution: 'Anthropic',
+    period: 'Completed in 1 June 2026',
+    logo: '/institutions/anthropic.png',
+  },
+  {
+    degree: 'Introduction to Model Context Protocol',
+    institution: 'Anthropic',
+    period: 'Completed in 18 May 2026',
+    logo: '/institutions/anthropic.png',
+  },
+  {
+    degree: 'Building with the Claude API',
+    institution: 'Anthropic',
+    period: 'Completed in 18 May 2026',
+    logo: '/institutions/anthropic.png',
   },
   {
     degree: 'Professional Web Developer',
     institution: 'Fairway',
-    period: 'Completed',
+    period: 'Completed in 2024',
+    logo: '/institutions/fairway.png',
   },
 ];
 
@@ -156,7 +194,7 @@ export const SKILLS: Skills = {
   Frontend: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'React', 'React Native', 'TypeScript', 'Tailwind CSS', 'Bootstrap', 'Kotlin'],
   Backend: ['C# (.NET)', 'PHP (Laravel)', 'Python', 'Kotlin', 'Hangfire'],
   Database: ['MSSQL', 'PostgreSQL', 'MySQL'],
-  Tools: ['Git', 'Docker', 'EF Core', 'GitHub Actions'],
+  Tools: ['Git', 'Docker', 'EF Core', 'GitHub Actions', 'GitHub Copilot', 'Subagents', 'Agent Skills'],
   AI: [
     'Prompt Engineering', 
     'Prompt Evaluation', 

@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen">
+  <div class="app-shell">
     <BackgroundAnimation />
     <Navbar />
     <main class="relative z-10">

@@ -1,33 +1,44 @@
 <template>
-  <section id="about" class="max-w-6xl mx-auto px-4 py-16 min-h-screen flex items-center">
-    <div class="w-full bg-white/70 dark:bg-gray-800/70 backdrop-blur-md rounded-2xl shadow-md p-8 md:p-12 border border-white/20 dark:border-gray-700/30">
-      <div class="max-w-4xl mx-auto">
-        <div class="flex items-center justify-center mb-6">
-          <div class="p-2 bg-indigo-100 dark:bg-indigo-900/50 rounded-lg mr-3">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-            </svg>
+  <section id="about" class="section-shell">
+    <div v-reveal="{ distance: 26 }" class="section-frame">
+      <div class="section-card grid gap-7 px-5 py-6 md:px-10 md:py-12 lg:grid-cols-[0.78fr_1.22fr] lg:gap-12">
+        <div class="flex flex-col justify-between gap-6">
+          <div v-reveal="{ delay: 60, distance: 18 }" class="section-heading text-left">
+            <p class="section-eyebrow">Profile</p>
+            <h2 class="section-title">{{ ABOUT_ME.title }}</h2>
+            <p class="section-copy mx-0">
+              I care about software that reads clearly, ships cleanly, and keeps its shape as the product becomes more complex.
+            </p>
           </div>
-          <h2 class="text-4xl font-bold text-gray-900 dark:text-white">{{ ABOUT_ME.title }}</h2>
+
+          <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+            <div v-reveal="{ delay: 120, distance: 18 }" class="panel p-5">
+              <p class="text-xs font-extrabold uppercase tracking-[0.26em] text-[var(--accent)]">Base</p>
+              <p class="mt-3 text-lg leading-7 text-[var(--text)]">Based in Yangon and interested in working with teams that value thoughtful engineering and global collaboration.</p>
+            </div>
+            <div v-reveal="{ delay: 190, distance: 18 }" class="panel p-5">
+              <p class="text-xs font-extrabold uppercase tracking-[0.26em] text-[var(--accent)]">Approach</p>
+              <p class="mt-3 text-lg leading-7 text-[var(--text)]">I treat backend logic, frontend polish, and product judgment as one connected system, not separate tasks.</p>
+            </div>
+          </div>
         </div>
 
-        <div class="text-gray-700 dark:text-gray-300 space-y-5 leading-relaxed text-base md:text-lg text-center">
-          <p v-for="(paragraph, index) in ABOUT_ME.description" :key="index">
-            {{ paragraph }}
-          </p>
-        </div>
+        <div class="space-y-5">
+          <div v-for="(paragraph, index) in ABOUT_ME.description" :key="index" v-reveal="{ delay: 120 + index * 80, distance: 20, origin: 'right' }" class="panel p-6 md:p-7">
+            <p class="text-base leading-8 text-[var(--text-muted)] md:text-lg">
+              {{ paragraph }}
+            </p>
+          </div>
 
-        <div class="mt-10 flex justify-center">
-          <a
-            href="/ppwin_cv.pdf"
-            download
-            class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-semibold rounded-xl shadow-lg text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-indigo-500/25"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-            </svg>
-            Download Full CV
-          </a>
+          <div v-reveal="{ delay: 260, distance: 18, origin: 'right' }" class="flex flex-col gap-3 sm:flex-row">
+            <a href="/ppwin_cv.pdf" download class="btn-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Download Full CV
+            </a>
+            <a href="#contact" class="btn-secondary">Discuss a Project</a>
+          </div>
         </div>
       </div>
     </div>

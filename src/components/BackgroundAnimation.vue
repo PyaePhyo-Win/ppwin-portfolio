@@ -1,52 +1,93 @@
 <template>
-  <div class="fixed inset-0 -z-10 overflow-hidden bg-slate-50 dark:bg-slate-950 transition-colors duration-500">
-    <!-- Professional High-Energy Tech Blobs -->
-    <div class="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-indigo-600/30 dark:bg-indigo-500/20 rounded-full blur-[100px] animate-mesh-1"></div>
-    <div class="absolute top-[10%] right-[-20%] w-[50%] h-[50%] bg-blue-600/30 dark:bg-blue-500/20 rounded-full blur-[100px] animate-mesh-2"></div>
-    <div class="absolute bottom-[-20%] left-[10%] w-[70%] h-[70%] bg-cyan-600/20 dark:bg-cyan-500/15 rounded-full blur-[100px] animate-mesh-3"></div>
-    <div class="absolute bottom-[20%] right-[10%] w-[40%] h-[40%] bg-slate-400/30 dark:bg-indigo-900/20 rounded-full blur-[80px] animate-mesh-4"></div>
-    <div class="absolute top-[40%] left-[30%] w-[30%] h-[30%] bg-sky-400/30 dark:bg-sky-600/10 rounded-full blur-[80px] animate-mesh-5"></div>
-
-    <!-- Subtle texture overlay -->
-    <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.15] mix-blend-overlay pointer-events-none"></div>
+  <div class="fixed inset-0 -z-10 overflow-hidden transition-colors duration-500">
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+    <div class="orb orb-three"></div>
+    <div class="grid-wash"></div>
+    <div class="vignette"></div>
   </div>
 </template>
 
 <style scoped>
-@keyframes mesh-1 {
-  0% { transform: translate(0, 0) scale(1) rotate(0deg); }
-  33% { transform: translate(30%, 40%) scale(1.4) rotate(120deg); }
-  66% { transform: translate(-25%, 30%) scale(0.6) rotate(240deg); }
-  100% { transform: translate(0, 0) scale(1) rotate(360deg); }
+.orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  opacity: 0.55;
 }
 
-@keyframes mesh-2 {
-  0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-40%, -30%) scale(1.5); }
-  100% { transform: translate(0, 0) scale(1); }
+.orb-one {
+  top: -10%;
+  left: -8%;
+  width: 34rem;
+  height: 34rem;
+  background: color-mix(in srgb, var(--highlight) 18%, transparent);
+  animation: drift-one 18s ease-in-out infinite;
 }
 
-@keyframes mesh-3 {
-  0% { transform: translate(0, 0) scale(1); }
-  40% { transform: translate(30%, -40%) scale(0.5); }
-  100% { transform: translate(0, 0) scale(1); }
+.orb-two {
+  top: 8%;
+  right: -10%;
+  width: 28rem;
+  height: 28rem;
+  background: color-mix(in srgb, var(--accent) 24%, transparent);
+  animation: drift-two 20s ease-in-out infinite;
 }
 
-@keyframes mesh-4 {
-  0% { transform: translate(0, 0) scale(1) rotate(0deg); }
-  50% { transform: translate(-40%, 30%) scale(1.3) rotate(-180deg); }
-  100% { transform: translate(0, 0) scale(1) rotate(-360deg); }
+.orb-three {
+  bottom: -18%;
+  left: 20%;
+  width: 36rem;
+  height: 36rem;
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  animation: drift-three 22s ease-in-out infinite;
 }
 
-@keyframes mesh-5 {
-  0% { transform: translate(0, 0); opacity: 0.4; }
-  50% { transform: translate(30%, 35%); opacity: 0.8; }
-  100% { transform: translate(0, 0); opacity: 0.4; }
+.grid-wash {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--surface-border) 58%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--surface-border) 58%, transparent) 1px, transparent 1px);
+  background-size: 84px 84px;
+  mask-image: radial-gradient(circle at center, black 35%, transparent 82%);
+  opacity: 0.28;
 }
 
-.animate-mesh-1 { animation: mesh-1 4s infinite linear; }
-.animate-mesh-2 { animation: mesh-2 5s infinite ease-in-out; }
-.animate-mesh-3 { animation: mesh-3 4.5s infinite ease-in-out; }
-.animate-mesh-4 { animation: mesh-4 3.5s infinite linear; }
-.animate-mesh-5 { animation: mesh-5 3s infinite ease-in-out; }
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 46%, rgba(0, 0, 0, 0.06) 100%);
+}
+
+@keyframes drift-one {
+  0%,
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(10%, 8%, 0) scale(1.08); }
+}
+
+@keyframes drift-two {
+  0%,
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(-12%, 10%, 0) scale(1.06); }
+}
+
+@keyframes drift-three {
+  0%,
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(8%, -10%, 0) scale(1.04); }
+}
+
+@media (max-width: 767px) {
+  .grid-wash {
+    background-size: 56px 56px;
+  }
+
+  .orb-one,
+  .orb-two,
+  .orb-three {
+    width: 22rem;
+    height: 22rem;
+  }
+}
 </style>

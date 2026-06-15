@@ -22,12 +22,14 @@ export interface WorkExperience {
   company: string;
   period?: string;
   description: string[];
+  logo?: string;
 }
 
 export interface Education {
   degree: string;
   institution: string;
   period: string;
+  logo?: string;
 }
 
 export type SkillCategory = 'Frontend' | 'Backend' | 'Database' | 'Tools' | string;
