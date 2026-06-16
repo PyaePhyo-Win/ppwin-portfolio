@@ -42,7 +42,7 @@ my-portfolio/
     │   ├── ProjectsSection.vue   # Card-based gallery layout for software creations
     │   ├── ProjectCard.vue # Visual wrapper displaying tags, links, and details for projects
     │   ├── SkillsSection.vue     # Dynamic section categorizing specific competencies
-    │   ├── ContactSection.vue    # Interactive contact block pointing to communication channels
+   │   ├── ContactSection.vue    # Direct contact links for email, GitHub, and LinkedIn
     │   ├── BackgroundAnimation.vue # Dynamic layered fluid ambient color backdrop
     │   └── Footer.vue      # Grounding sign-off and copyright block
     ├── constants/

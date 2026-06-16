@@ -71,34 +71,46 @@ export const ACADEMIC_EDUCATION: Education[] = [
 
 export const CERTIFICATIONS: Education[] = [
   {
+    degree: 'Introduction to agent skills',
+    institution: 'Anthropic',
+    period: 'Completed in 15 June 2026',
+    logo: '/institutions/anthropic.png',
+    credentialUrl: 'https://drive.google.com/file/d/1_4b2mwMdufwOVoO0zFCIjp0WzkqBwx2x/view?usp=sharing',
+  },
+  {
     degree: 'Introduction to subagents',
     institution: 'Anthropic',
     period: 'Completed in 12 June 2026',
     logo: '/institutions/anthropic.png',
+    credentialUrl: 'https://drive.google.com/file/d/1jliyuZS62E_v7yRA_qTuOg-bUVGvGW8a/view?usp=sharing',
   },
   {
     degree: 'Claude Code 101',
     institution: 'Anthropic',
     period: 'Completed in 9 June 2026',
     logo: '/institutions/anthropic.png',
+    credentialUrl: 'https://drive.google.com/file/d/1iO3ielH4qhniKw34XqdJVZ0pO-uDgQDm/view?usp=sharing',
   },
   {
     degree: 'Claude Code in Action',
     institution: 'Anthropic',
     period: 'Completed in 1 June 2026',
     logo: '/institutions/anthropic.png',
+    credentialUrl: 'https://drive.google.com/file/d/1uzhx8GJ0sYTrUDLZGSLGjw3zw4dkUdxK/view?usp=sharing',
   },
   {
     degree: 'Introduction to Model Context Protocol',
     institution: 'Anthropic',
     period: 'Completed in 18 May 2026',
     logo: '/institutions/anthropic.png',
+    credentialUrl: 'https://drive.google.com/file/d/1k0PfZ6qpgp3GyGCd3Z4g7J7HOSuBDEuY/view?usp=sharing',
   },
   {
     degree: 'Building with the Claude API',
     institution: 'Anthropic',
     period: 'Completed in 18 May 2026',
     logo: '/institutions/anthropic.png',
+    credentialUrl: 'https://drive.google.com/file/d/1X8bwAoHFt3lHtpEwu_cgSRXEHPJfB0Ka/view?usp=sharing',
   },
   {
     degree: 'Professional Web Developer',

@@ -36,39 +36,83 @@
 
       <!-- Academic Education Grid -->
       <div v-if="activeTab === 'academic'" key="academic" class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        <article 
+        <article
           v-for="(edu, index) in ACADEMIC_EDUCATION" 
           :key="index" 
-          v-reveal="{ delay: index * 70, distance: 24 }" 
-          class="section-card flex h-full flex-col justify-between p-6"
+          v-reveal="{ delay: index * 70, distance: 24 }"
+          :class="[
+            'section-card flex h-full flex-col justify-between p-6 transition-transform duration-300',
+            edu.credentialUrl
+              ? 'cursor-pointer hover:-translate-y-1 focus-within:-translate-y-1'
+              : 'opacity-90'
+          ]"
         >
-          <div>
-            <p class="text-xs font-extrabold uppercase tracking-[0.26em] text-[var(--accent)]">0{{ index + 1 }}</p>
-            <h3 class="mt-4 text-3xl leading-tight text-[var(--text)]">{{ edu.degree }}</h3>
-            <div class="mt-4">
-              <LogoLabel :label="edu.institution" :logo="edu.logo" />
+          <button
+            type="button"
+            class="flex h-full flex-col justify-between text-left focus:outline-none"
+            :class="edu.credentialUrl ? 'cursor-pointer' : 'cursor-default'"
+            :disabled="!edu.credentialUrl"
+            :aria-label="edu.credentialUrl ? `Open ${edu.degree}` : `${edu.degree} document not available yet`"
+            @click="openCredential(edu)"
+          >
+            <div>
+              <p class="text-xs font-extrabold uppercase tracking-[0.26em] text-[var(--accent)]">0{{ index + 1 }}</p>
+              <h3 class="mt-4 text-3xl leading-tight text-[var(--text)]">{{ edu.degree }}</h3>
+              <div class="mt-4">
+                <LogoLabel :label="edu.institution" :logo="edu.logo" />
+              </div>
             </div>
-          </div>
-          <p class="mt-8 text-xs font-extrabold uppercase tracking-[0.24em] text-[var(--text-soft)]">{{ edu.period }}</p>
+            <div class="mt-8 flex items-center justify-between gap-4">
+              <p class="text-xs font-extrabold uppercase tracking-[0.24em] text-[var(--text-soft)]">{{ edu.period }}</p>
+              <span
+                v-if="edu.credentialUrl"
+                class="text-[0.72rem] font-extrabold uppercase tracking-[0.2em] text-[var(--accent)]"
+              >
+                View
+              </span>
+            </div>
+          </button>
         </article>
       </div>
 
       <!-- Certifications Grid -->
       <div v-else-if="activeTab === 'certificate'" key="certificate" class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        <article 
+        <article
           v-for="(cert, index) in CERTIFICATIONS" 
           :key="index" 
-          v-reveal="{ delay: index * 70, distance: 24 }" 
-          class="section-card flex h-full flex-col justify-between p-6"
+          v-reveal="{ delay: index * 70, distance: 24 }"
+          :class="[
+            'section-card flex h-full flex-col justify-between p-6 transition-transform duration-300',
+            cert.credentialUrl
+              ? 'cursor-pointer hover:-translate-y-1 focus-within:-translate-y-1'
+              : 'opacity-90'
+          ]"
         >
-          <div>
-            <p class="text-xs font-extrabold uppercase tracking-[0.26em] text-[var(--accent)]">0{{ index + 1 }}</p>
-            <h3 class="mt-4 text-3xl leading-tight text-[var(--text)]">{{ cert.degree }}</h3>
-            <div class="mt-4">
-              <LogoLabel :label="cert.institution" :logo="cert.logo" />
+          <button
+            type="button"
+            class="flex h-full flex-col justify-between text-left focus:outline-none"
+            :class="cert.credentialUrl ? 'cursor-pointer' : 'cursor-default'"
+            :disabled="!cert.credentialUrl"
+            :aria-label="cert.credentialUrl ? `Open ${cert.degree}` : `${cert.degree} document not available yet`"
+            @click="openCredential(cert)"
+          >
+            <div>
+              <p class="text-xs font-extrabold uppercase tracking-[0.26em] text-[var(--accent)]">0{{ index + 1 }}</p>
+              <h3 class="mt-4 text-3xl leading-tight text-[var(--text)]">{{ cert.degree }}</h3>
+              <div class="mt-4">
+                <LogoLabel :label="cert.institution" :logo="cert.logo" />
+              </div>
             </div>
-          </div>
-          <p class="mt-8 text-xs font-extrabold uppercase tracking-[0.24em] text-[var(--text-soft)]">{{ cert.period }}</p>
+            <div class="mt-8 flex items-center justify-between gap-4">
+              <p class="text-xs font-extrabold uppercase tracking-[0.24em] text-[var(--text-soft)]">{{ cert.period }}</p>
+              <span
+                v-if="cert.credentialUrl"
+                class="text-[0.72rem] font-extrabold uppercase tracking-[0.2em] text-[var(--accent)]"
+              >
+                View
+              </span>
+            </div>
+          </button>
         </article>
       </div>
     </div>
@@ -78,9 +122,18 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { ACADEMIC_EDUCATION, CERTIFICATIONS } from '../constants/data';
+import type { Education } from '../types';
 import LogoLabel from './LogoLabel.vue';
 
 const activeTab = ref<'academic' | 'certificate'>('academic');
+
+const openCredential = (item: Education) => {
+  if (!item.credentialUrl) {
+    return;
+  }
+
+  window.open(item.credentialUrl, '_blank', 'noopener,noreferrer');
+};
 
 const tabStyle = (isActive: boolean) => {
   if (isActive) {

@@ -30,6 +30,7 @@ export interface Education {
   institution: string;
   period: string;
   logo?: string;
+  credentialUrl?: string;
 }
 
 export type SkillCategory = 'Frontend' | 'Backend' | 'Database' | 'Tools' | string;
