@@ -1,7 +1,7 @@
 import type { Project, NavLink, Skills, WorkExperience, Education, Stat } from '../types';
 
 export const STATS: Stat[] = [
-  { label: 'Projects Completed', value: '15', iconKey: 'projects' },
+  { label: 'Projects Completed', value: '17', iconKey: 'projects' },
 ];
 
 export const NAV_LINKS: NavLink[] = [
@@ -183,7 +183,7 @@ export const PROJECTS: Project[] = [
     githubLink: 'https://github.com/PyaePhyo-Win/gemini-api-integration',
   },
   {
-    title:'NetFix CLI',
+    title: 'NetFix CLI',
     description: 'A high-performance TypeScript CLI tool that autonomously diagnoses and repairs network/DNS issues across macOS, Linux, and Windows. It features dynamic interface detection, a polished terminal UX, and a fully automated CI/CD pipeline for professional-grade reliability and distribution.',
     techStack: ['TypeScript', 'Node.js', 'Commander.js', 'Execa', 'Chalk', 'Ora', 'Update-Notifier', 'Jest', 'ESLint', 'GitHub Actions'],
     githubLink: 'https://github.com/PyaePhyo-Win/net-fix-cli',
@@ -194,11 +194,17 @@ export const PROJECTS: Project[] = [
     techStack: ['Swift', 'SwiftUI', 'AVFoundation', 'IOKit', 'Combine'],
     githubLink: 'https://github.com/PyaePhyo-Win/fahhhhh-player',
   }
-  ,{
+  , {
     title: 'MCP Chat CLI',
     description: 'MCP Chat is a command-line interface application built to learn and demonstrate how a Model Context Protocol (MCP) server and client interact. It enables chat capabilities with AI models through the Gemini API, supporting document retrieval, command-based prompts, and extensible tool integrations.',
     techStack: ['Python', 'Gemini API', 'Google GenAI SDK', 'Rich', 'MCP'],
     githubLink: 'https://github.com/PyaePhyo-Win/mcp-chat-cli',
+  },
+  {
+    title: 'UIGen — AI-Powered React Component Generator',
+    description: 'A full-stack web app that lets users describe UI components in plain English and instantly generate, preview, and iterate on production-ready React code. Features a live hot-reloading preview powered by a browser-side virtual file system, with support for saving and loading projects for registered users.',
+    techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Vitest', 'Prisma', 'SQLite', 'MongoDB', 'Google Gemini', 'Vercel AI SDK', 'Babel Standalone'],
+    githubLink: 'https://github.com/PyaePhyo-Win/ui-gen',
   }
 ];
 
@@ -208,10 +214,10 @@ export const SKILLS: Skills = {
   Database: ['MSSQL', 'PostgreSQL', 'MySQL'],
   Tools: ['Git', 'Docker', 'EF Core', 'GitHub Actions', 'GitHub Copilot', 'Subagents', 'Agent Skills'],
   AI: [
-    'Prompt Engineering', 
-    'Prompt Evaluation', 
-    'Structured Output (JSON Mode)', 
-    'Streaming Responses', 
+    'Prompt Engineering',
+    'Prompt Evaluation',
+    'Structured Output (JSON Mode)',
+    'Streaming Responses',
     'Multimodal LLMs (Vision)', 'GPT', 'Gemini', 'Tool Use', 'RAG', 'Agentic Search'
   ]
 };
