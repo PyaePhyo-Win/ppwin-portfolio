@@ -54,6 +54,7 @@ export const ACADEMIC_EDUCATION: Education[] = [
     institution: 'University of Greenwich (UK)',
     period: 'Awarded in 26 Feb 2026',
     logo: '/institutions/greenwich.png',
+    credentialUrl: 'https://drive.google.com/file/d/1tfn_Q6vVjHPSzOpxhi1G0jqrOo79Mz3K/view?usp=sharing',
   },
   {
     degree: 'Level 5 Diploma in Computing',
