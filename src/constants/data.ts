@@ -61,12 +61,14 @@ export const ACADEMIC_EDUCATION: Education[] = [
     institution: 'KMD College',
     period: 'Awarded in 25 Oct 2024',
     logo: '/institutions/kmd.png',
+    credentialUrl: 'https://drive.google.com/file/d/13PVaqnSy7kfJnaTk_thzd5u8R0JH5dKC/view?usp=sharing',
   },
   {
     degree: 'Level 4 Diploma in Computing',
     institution: 'KMD College',
     period: 'Awarded in 27 Oct 2023',
     logo: '/institutions/kmd.png',
+    credentialUrl: 'https://drive.google.com/file/d/1e2okJLK8T90ecsv4S9RCfZ5a8iXVWPwQ/view?usp=sharing',
   },
 ];
 
