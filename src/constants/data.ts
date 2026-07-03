@@ -74,6 +74,13 @@ export const ACADEMIC_EDUCATION: Education[] = [
 
 export const CERTIFICATIONS: Education[] = [
   {
+    degree: 'Model Context Protocol: Advanced Topics',
+    institution: 'Anthropic',
+    period: 'Completed in 3 July 2026',
+    logo: '/institutions/anthropic.png',
+    credentialUrl: 'https://drive.google.com/file/d/1G8O2srQ2Xv2rsrdRhpqLsHGAjDmuWIUk/view?usp=sharing',
+  },
+  {
     degree: 'Introduction to agent skills',
     institution: 'Anthropic',
     period: 'Completed in 15 June 2026',
