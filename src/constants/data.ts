@@ -222,12 +222,12 @@ export const SKILLS: Skills = {
   Frontend: ['HTML', 'CSS', 'JavaScript', 'Vue.js', 'React', 'React Native', 'TypeScript', 'Tailwind CSS', 'Bootstrap', 'Kotlin'],
   Backend: ['C# (.NET)', 'PHP (Laravel)', 'Python', 'Kotlin', 'Hangfire'],
   Database: ['MSSQL', 'PostgreSQL', 'MySQL'],
-  Tools: ['Git', 'Docker', 'EF Core', 'GitHub Actions', 'GitHub Copilot', 'Subagents', 'Agent Skills'],
+  Tools: ['Git', 'Docker', 'EF Core', 'GitHub Actions', 'GitHub Copilot', 'Cursor', 'Subagents', 'Agent Skills'],
   AI: [
     'Prompt Engineering',
     'Prompt Evaluation',
     'Structured Output (JSON Mode)',
     'Streaming Responses',
-    'Multimodal LLMs (Vision)', 'GPT', 'Gemini', 'Tool Use', 'RAG', 'Agentic Search'
+    'Multimodal LLMs (Vision)', 'GPT', 'Gemini', 'Tool Use', 'RAG', 'Agentic Search', 'MCP Server', 'MCP Client'
   ]
 };
