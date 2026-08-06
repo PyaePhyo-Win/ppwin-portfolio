@@ -215,7 +215,14 @@ export const PROJECTS: Project[] = [
     description: 'A full-stack web app that lets users describe UI components in plain English and instantly generate, preview, and iterate on production-ready React code. Features a live hot-reloading preview powered by a browser-side virtual file system, with support for saving and loading projects for registered users.',
     techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Vitest', 'Prisma', 'SQLite', 'MongoDB', 'Google Gemini', 'Vercel AI SDK', 'Babel Standalone'],
     githubLink: 'https://github.com/PyaePhyo-Win/ui-gen',
-  }
+  },
+  {
+    title: 'Rainfall Typing',
+    description: 'A bilingual Myanmar typing trainer for practicing the Pyidaungsu keyboard layout, featuring guided tutorial lessons and a rainfall arcade game where users type falling Myanmar words before they land.',
+    techStack: ['Vite', 'React', 'JavaScript', 'Tailwind CSS', 'Zustand', 'React Router', 'i18next', 'react-i18next', 'Canvas API', 'Web Audio API', 'grapheme-splitter', 'Myanmar Unicode Utilities', 'Oxlint'],
+    githubLink: 'https://github.com/PyaePhyo-Win/rainfall-typing',
+    demoLink: 'https://rainfall-typing.vercel.app/',
+  },
 ];
 
 export const SKILLS: Skills = {
