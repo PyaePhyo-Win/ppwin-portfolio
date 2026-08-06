@@ -3,8 +3,8 @@
     <div class="mx-auto flex max-w-6xl items-center justify-between rounded-full border px-4 py-3 shadow-[var(--shadow-soft)] backdrop-blur-xl md:px-6"
       style="background: color-mix(in srgb, var(--bg-elevated) 88%, transparent); border-color: var(--surface-border);">
       <router-link to="/" class="flex items-center gap-3 text-[var(--text)] transition-opacity duration-300 hover:opacity-80">
-        <span class="flex h-10 w-10 items-center justify-center rounded-full text-sm font-extrabold"
-          style="background: color-mix(in srgb, var(--accent-soft) 62%, var(--surface-strong)); color: var(--accent);">PP</span>
+        <img src="/profile-1.jpeg" alt="Pyae Phyo Win" class="h-10 w-10 rounded-full object-cover border"
+          style="border-color: var(--surface-border);" />
         <span class="hidden sm:block">
           <span class="block text-[10px] font-extrabold uppercase tracking-[0.3em] text-[var(--accent)]">Portfolio</span>
           <span class="block text-lg font-extrabold">Pyae Phyo Win</span>
