@@ -1,7 +1,7 @@
 import type { Project, NavLink, Skills, WorkExperience, Education, Stat } from '../types';
 
 export const STATS: Stat[] = [
-  { label: 'Projects Completed', value: '17', iconKey: 'projects' },
+  { label: 'Projects Completed', value: '24', iconKey: 'projects' },
 ];
 
 export const NAV_LINKS: NavLink[] = [
@@ -223,6 +223,39 @@ export const PROJECTS: Project[] = [
     githubLink: 'https://github.com/PyaePhyo-Win/rainfall-typing',
     demoLink: 'https://rainfall-typing.vercel.app/',
   },
+  {
+    title: 'Smart Briefing App',
+    description: 'AI-powered research briefing app with a decoupled FastAPI backend and Next.js frontend. Runs CrewAI research workflows, searches web via Serper/DuckDuckGo fallback, stores data in PostgreSQL with pgvector, indexes Voyage AI embeddings, compacts chat memory with Gemini, and streams Gemini-polished Markdown + chat responses via SSE.',
+    techStack: ['Python', 'FastAPI', 'CrewAI', 'Gemini AI', 'Voyage AI', 'PostgreSQL', 'pgvector', 'Redis', 'MinIO', 'Stripe', 'Docker', 'Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+    githubLink: 'https://github.com/PyaePhyo-Win/smart-briefing-app',
+  },
+  {
+    title: 'MCP Note App',
+    description: 'A full-stack note-taking application with React UI, Express/SQLite backend, real-time SSE updates, JWT auth, and AI agent integration via MCP. Supports create/read/update/delete notes with live refresh when notes change through REST or MCP tools.',
+    techStack: ['React 18', 'TypeScript', 'Express', 'SQLite', 'SSE', 'JWT', 'MCP Client', 'MCP Server', 'Tailwind CSS', 'Vite', 'TanStack Query', 'Zod', 'Python', 'Gemini AI'],
+    githubLink: 'https://github.com/PyaePhyo-Win/mcp-note-app',
+  },
+  {
+    title: 'Smart Food — AI Food Assistant (MVP)',
+    description: 'Users describe cravings in plain language and receive AI-ranked food recommendations with match scores, rationale, and one-tap ordering. Features a deterministic fallback scoring engine when no Gemini API key is provided.',
+    techStack: ['Next.js', 'React', 'Tailwind CSS', 'App Router', 'Prisma', 'SQLite', 'Gemini AI', 'Client Components'],
+    githubLink: 'https://github.com/PyaePhyo-Win/smart-food',
+    demoLink: 'https://smartfoodassistant.netlify.app/',
+  },
+  {
+    title: 'AI Travel Champion (MVP)',
+    description: 'Users describe a trip in free text, the AI extracts details, generates personalized place recommendations, and builds a day-by-day itinerary with a human-in-the-loop feedback loop (keep / replace / quick-feedback chips).',
+    techStack: ['Next.js 15', 'React 19', 'Tailwind CSS', 'Prisma', 'Turso (libSQL)', 'Gemini AI', 'Auth.js (Next Auth v5)', 'MapLibre GL', 'Stadia Maps'],
+    githubLink: 'https://github.com/PyaePhyo-Win/ai-travel-champion',
+    demoLink: 'https://aitravelchampion.netlify.app/',
+  },
+  {
+    title: 'ListIQ (MVP)',
+    description: "Bilingual trust-assisted second-hand marketplace MVP. Sellers upload up to 3 item photos and details; Gemini generates polished copy, estimates condition and an MMK price range, and scores whether the visible item matches the seller's claim before publication. No authentication—time-boxed demo.",
+    techStack: ['Next.js 16', 'React 19', 'Tailwind CSS', 'Prisma', 'Turso (libSQL)', 'Gemini AI', 'UploadThing', 'Zod'],
+    githubLink: 'https://github.com/Neural-Wave-Hackathon/listiq',
+    demoLink: 'https://listiqhackathon.netlify.app/',
+  }
 ];
 
 export const SKILLS: Skills = {
